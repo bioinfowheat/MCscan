@@ -42,16 +42,16 @@ Scaffold ID, scaffold position, LG, genetic positions
 
 You can do this in EXCEL, but remember to save as "comma-separated format".
 
-##### Step 2. Get scaffolds FASTA file and weights file
+##### Step 2. Merge all three maps together
+```
+python -m jcvi.assembly.allmaps merge JMMale.csv JMFemale.csv JMF2.csv -o JM-3.bed
+```
+
+##### Step 3. Modify the weights file if you want. Default is every map set to weight of 1.
 ```
 JMFemale 1
 JMMale 1
 JMF2 1
-```
-
-##### Step 3. Merge all three maps together
-```
-python -m jcvi.assembly.allmaps merge JMMale.csv JMFemale.csv JMF2.csv -o JM-3.bed
 ```
 
 ##### Step 4. Run scaffold ordering. Which takes your merged bed (step 3), and weights file (step 2) and original scaffold FASTA file.
