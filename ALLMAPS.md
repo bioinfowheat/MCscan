@@ -75,6 +75,11 @@ python -m jcvi.assembly.allmaps path JM-2.bed weights.txt scaffolds.fasta
 python -m jcvi.assembly.allmaps build JM-2.chr.agp scaffolds.fasta JM-2.bed
 ```
 
+We now have a release!
+* `JM-2.fasta` - reconstructed chromosome sequences
+* `JM-2.agp` - order and orientations of the scaffolds, which can be used in Genbank submissions
+* `JM-2.chain` - useful to convert scaffold coordinates to new coordinates, for example, if you annotated gene models using the scaffolds, you can use this file along with `liftOver` to transfer the genes onto chromosomes
+
 ##### Step 6. Plot alignments
 ```
 python -m jcvi.assembly.allmaps plotall JM-2.lifted.bed JM-2.agp weights.txt
