@@ -31,7 +31,12 @@ To avoid setting `PYTHONPATH` everytime, please insert the last command in your 
 These external dependencies are available in my repo [jcvi-bin](https://github.com/tanghaibao/jcvi-bin), which are compiled on Linux (CentOS6). If they fail to execute, please get concorde from [here] (http://www.math.uwaterloo.ca/tsp/concorde.html), faSize/liftOver from [here](http://hgdownload.cse.ucsc.edu/admin/jksrc.zip) and recompile if necessary. 
 
 ## Walk-through example
-We would like to use a small example to showcase what you can do with ALLMAPS. In this example, we have two maps, and scaffold sequences. Our goal is to use the two maps, to order and orient the genomic scaffolds into chromosomes.
+We would like to use a small example to showcase what you can do with ALLMAPS. In this example, we have two maps, and scaffold sequences. Our goal is to use the two maps, to order and orient the genomic scaffolds into chromosomes. We have the following information:
+* scaffold sequences (`scaffolds.fasta`)
+* Map 1 (`JMMale.csv`)
+* Map 2 (`JMFeale.csv`)
+
+That's it. Now let's watch how the magic unfolds.
 
 ##### Step 1. Prepare input data
 ```
@@ -42,31 +47,32 @@ Scaffold ID, scaffold position, LG, genetic position
 You can do this in EXCEL, but remember to save as "comma-separated format".
 ![Save file in CSV](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS-testdata/CSV-saving.png)
 
-##### Step 2. Merge all three maps together
+For the test maps, both maps are properly formatted, so you can skip this step.
+
+##### Step 2. Merge the two maps together
 ```
-python -m jcvi.assembly.allmaps merge JMMale.csv JMFemale.csv JMF2.csv -o JM-3.bed
+python -m jcvi.assembly.allmaps merge JMMale.csv JMFemale.csv -o JM-2.bed
 ```
 
-##### Step 3. Modify the weights file if you want. Default is every map set to weight of 1.
+##### Step 3. Modify the weights file if you need. Default is every map set to weight of 1.
 ```
 JMFemale 1
 JMMale 1
-JMF2 1
 ```
 
 ##### Step 4. Run scaffold ordering. Which takes your merged bed (step 3), and weights file (step 2) and original scaffold FASTA file.
 ```
-python -m jcvi.assembly.allmaps path JM-3.bed weights.txt genome.fasta
+python -m jcvi.assembly.allmaps path JM-2.bed weights.txt scaffolds.fasta
 ```
 
 ##### Step 5. Build release
 ```
-python -m jcvi.assembly.allmaps build JM-3.chr.agp genome.fasta JM-3.bed
+python -m jcvi.assembly.allmaps build JM-2.chr.agp scaffolds.fasta JM-2.bed
 ```
 
 ##### Step 6. Plot alignments
 ```
-python -m jcvi.assembly.allmaps plotall JM-3.lifted.bed JM-3.agp weights.txt
+python -m jcvi.assembly.allmaps plotall JM-2.lifted.bed JM-2.agp weights.txt
 ```
-
+![chr23 alignments](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS-testdata/chr23.png)
 
