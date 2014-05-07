@@ -12,7 +12,6 @@
 Most of the Python libraries can be installed using `easy_install` or `pip install`, for example:
 ```
 easy_install deap
-pip install deap
 ```
 
 Finally, make sure that you install the `jcvi` repository and put the directory on your `PYTHONPATH`. For example if you want to install it to `~/code`, do the following:
