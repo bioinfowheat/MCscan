@@ -65,7 +65,7 @@ JMFemale 1
 JMMale 1
 ```
 
-##### Step 4. Run scaffold ordering. Which takes your merged bed (step 3), and weights file (step 2) and original scaffold FASTA file.
+##### Step 4. Run scaffold ordering, which takes your merged bed, weights file and original scaffold FASTA file.
 ```
 python -m jcvi.assembly.allmaps path JM-2.bed weights.txt scaffolds.fasta
 ```
