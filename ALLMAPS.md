@@ -3,7 +3,7 @@
 ## Installation
 ### Python dependencies
 * [Biopython](http://biopython.org/)
-* [Numpy](numpy.org)
+* [Numpy](http://numpy.org)
 * [DEAP](https://code.google.com/p/deap/)
 * [NetworkX](https://networkx.github.io/)
 * [Matplotlib](http://matplotlib.org) (required only for plotting)
