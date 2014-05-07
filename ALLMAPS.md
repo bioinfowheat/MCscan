@@ -59,7 +59,7 @@ For the test maps, both maps are properly formatted, so you can skip this step.
 python -m jcvi.assembly.allmaps merge JMMale.csv JMFemale.csv -o JM-2.bed
 ```
 
-##### Step 3. Modify the weights file if you need. Default is every map set to weight of 1.
+##### Step 3. Modify the weights file (`weights.txt`) if needed. Default is every map set to weight of 1.
 ```
 JMFemale 1
 JMMale 1
