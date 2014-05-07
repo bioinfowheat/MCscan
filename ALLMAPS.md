@@ -34,7 +34,7 @@ These external dependencies are available in my repo [jcvi-bin](https://github.c
 We would like to use a small example to showcase what you can do with ALLMAPS. In this example, we have two maps, and scaffold sequences. Our goal is to use the two maps, to order and orient the genomic scaffolds into chromosomes. We have the following information:
 * scaffold sequences (`scaffolds.fasta`)
 * Map 1 (`JMMale.csv`)
-* Map 2 (`JMFeale.csv`)
+* Map 2 (`JMFemale.csv`)
 
 That's it. Now let's watch how the magic unfolds.
 
