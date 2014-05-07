@@ -28,7 +28,13 @@ To avoid setting `PYTHONPATH` everytime, please insert the last command in your 
 * faSize
 * liftOver
 
-These external dependencies are available in my repo [jcvi-bin](https://github.com/tanghaibao/jcvi-bin), which are compiled on Linux (CentOS6). If they fail to execute, please get concorde from [here] (http://www.math.uwaterloo.ca/tsp/concorde.html), faSize/liftOver from [here](http://hgdownload.cse.ucsc.edu/admin/jksrc.zip) and recompile if necessary. 
+These external dependencies are available in my repo [jcvi-bin](https://github.com/tanghaibao/jcvi-bin), which are compiled on Linux (CentOS6). You need to copy the following binaries to a directory that's on you `PATH`.
+```
+$ git clone git@github.com:tanghaibao/jcvi-bin.git
+$ cp jcvi-bin/bin/* /usr/local/bin
+```
+
+If they fail to execute, please get concorde from [here] (http://www.math.uwaterloo.ca/tsp/concorde.html), faSize/liftOver from [here](http://hgdownload.cse.ucsc.edu/admin/jksrc.zip) and recompile if necessary. 
 
 ## Walk-through example
 We would like to use a small example to showcase what you can do with ALLMAPS. In this example, we have two maps, and scaffold sequences. Our goal is to use the two maps, to order and orient the genomic scaffolds into chromosomes. We have the following information:
