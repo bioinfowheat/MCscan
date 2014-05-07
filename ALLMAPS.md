@@ -33,14 +33,14 @@ These external dependencies are available in my repo [jcvi-bin](https://github.c
 ## Walk-through example
 We would like to use a small example to showcase what you can do with ALLMAPS. In this example, we have two maps, and scaffold sequences. Our goal is to use the two maps, to order and orient the genomic scaffolds into chromosomes.
 
-##### Step 0. What you have so far
-
-##### Step 1. Convert input data to four column csv files:
+##### Step 1. Prepare input data
 ```
-Scaffold ID, scaffold position, LG, genetic positions
+Scaffold ID, scaffold position, LG, genetic position
 ```
+![Genetic map format](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS-testdata/Map-format.png)
 
 You can do this in EXCEL, but remember to save as "comma-separated format".
+![Save file in CSV](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS-testdata/CSV-saving.png)
 
 ##### Step 2. Merge all three maps together
 ```
@@ -64,7 +64,7 @@ python -m jcvi.assembly.allmaps path JM-3.bed weights.txt genome.fasta
 python -m jcvi.assembly.allmaps build JM-3.chr.agp genome.fasta JM-3.bed
 ```
 
-##### Step 6. Plot
+##### Step 6. Plot alignments
 ```
 python -m jcvi.assembly.allmaps plotall JM-3.lifted.bed JM-3.agp weights.txt
 ```
