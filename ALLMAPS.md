@@ -80,9 +80,44 @@ We now have a release!
 * `JM-2.agp` - order and orientations of the scaffolds, which can be used in Genbank submissions
 * `JM-2.chain` - useful to convert scaffold coordinates to new coordinates, for example, if you annotated gene models using the scaffolds, you can use this file along with `liftOver` to transfer the genes onto chromosomes
 
-##### Step 6. Plot alignments
+##### Optional. Plot alignments
 ```
 python -m jcvi.assembly.allmaps plotall JM-2.lifted.bed JM-2.agp weights.txt
 ```
 ![chr23 alignments](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS-testdata/chr23.png)
+
+##### Optional. Summary statistics
+```
+python -m jcvi.assembly.allmaps summary JM-2.chr.agp scaffolds.fasta JM-2.bed
+```
+This command will create following table, summarizing various stats before and after the scaffold anchoring.
+```
+*** Summary for each individual map ***
+======================================================
+                         o      JMFemale        JMMale
+------------------------------------------------------
+            Linkage Groups             1             1
+                   Markers            61            59
+             N50 Scaffolds             5             5
+                 Scaffolds            18            18
+   Scaffolds with 1 marker             7             7
+  Scaffolds with 2 markers             3             5
+  Scaffolds with 3 markers             1             0
+Scaffolds with >=4 markers             7             6
+               Total bases    14,691,276    13,781,640
+------------------------------------------------------
+*** Summary for consensus map ***
+====================================================
+                         o      Anchored    Unplaced
+----------------------------------------------------
+                   Markers           120           0
+             N50 Scaffolds             5           0
+                 Scaffolds            22           0
+   Scaffolds with 1 marker             5           0
+  Scaffolds with 2 markers             7           0
+  Scaffolds with 3 markers             1           0
+Scaffolds with >=4 markers             9           0
+               Total bases    15,270,543           0
+----------------------------------------------------
+```
 
