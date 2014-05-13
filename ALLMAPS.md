@@ -90,7 +90,7 @@ python -m jcvi.assembly.allmaps plotall JM-2.lifted.bed JM-2.agp weights.txt
 ```
 python -m jcvi.assembly.allmaps summary JM-2.chr.agp scaffolds.fasta JM-2.bed
 ```
-This command will create following table, summarizing various stats before and after the scaffold anchoring.
+This command will create following tables, summarizing various stats before and after the scaffold anchoring.
 ```
 *** Summary for each individual map ***
 ======================================================
