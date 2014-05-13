@@ -1,4 +1,4 @@
-Welcome to the jcvi wiki! To use `jcvi` as a generic Bioinformatics library, please follow the instructions on the project README page. Below are applications to solve domain-specific problems.
+Welcome to the jcvi wiki! To use `jcvi` as a generic Bioinformatics library, please follow the instructions on the [project page](https://github.com/tanghaibao/jcvi/). This wiki hosts standalone applications within the library that are capable of solving domain-specific problems.
 
 ## Applications
 
