@@ -20,7 +20,7 @@ Most of the Python libraries can be installed using `easy_install` or `pip insta
 easy_install deap
 ```
 
-Finally, make sure that you install the `jcvi` repository and put the directory on your `PYTHONPATH`. For example if you want to install it to `~/code`, do the following:
+Finally, make sure that you install [jcvi](https://github.com/tanghaibao/jcvi/) repository and put the directory on your `PYTHONPATH`. For example if you want to install it to `~/code`, do the following:
 ```
 $ cd ~/code
 $ git clone git@github.com:tanghaibao/jcvi.git
