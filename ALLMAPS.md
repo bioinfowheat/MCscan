@@ -99,31 +99,31 @@ python -m jcvi.assembly.allmaps summary JM-2.chr.agp scaffolds.fasta JM-2.bed
 This command will create following tables, summarizing various stats before and after the scaffold anchoring.
 ```
 *** Summary for each individual map ***
-==================================================================
-                         o            JMFemale              JMMale
-------------------------------------------------------------------
-            Linkage Groups                   1                   1
-                   Markers                  61                  59
-             N50 Scaffolds                   5                   5
-                 Scaffolds                  18                  18
-   Scaffolds with 1 marker                   7                   7
-  Scaffolds with 2 markers                   3                   5
-  Scaffolds with 3 markers                   1                   0
-Scaffolds with >=4 markers                   7                   6
-               Total bases    14691276 (96.2%)    13781640 (90.2%)
-------------------------------------------------------------------
+======================================================================
+                         o              JMFemale                JMMale
+----------------------------------------------------------------------
+            Linkage Groups                     1                     1
+                   Markers                    61                    59
+             N50 Scaffolds                     5                     5
+                 Scaffolds                    18                    18
+   Scaffolds with 1 marker                     7                     7
+  Scaffolds with 2 markers                     3                     5
+  Scaffolds with 3 markers                     1                     0
+Scaffolds with >=4 markers                     7                     6
+               Total bases    14,691,276 (96.2%)    13,781,640 (90.2%)
+----------------------------------------------------------------------
 *** Summary for consensus map ***
-===========================================================
-                         o             Anchored    Unplaced
------------------------------------------------------------
-                   Markers                  120           0
-             N50 Scaffolds                    5           0
-                 Scaffolds                   22           0
-   Scaffolds with 1 marker                    5           0
-  Scaffolds with 2 markers                    7           0
-  Scaffolds with 3 markers                    1           0
-Scaffolds with >=4 markers                    9           0
-               Total bases    15270543 (100.0%)    0 (0.0%)
------------------------------------------------------------
+=============================================================
+                         o               Anchored    Unplaced
+-------------------------------------------------------------
+                   Markers                    120           0
+             N50 Scaffolds                      5           0
+                 Scaffolds                     22           0
+   Scaffolds with 1 marker                      5           0
+  Scaffolds with 2 markers                      7           0
+  Scaffolds with 3 markers                      1           0
+Scaffolds with >=4 markers                      9           0
+               Total bases    15,270,543 (100.0%)    0 (0.0%)
+-------------------------------------------------------------
 ```
 The anchor rate for the consensus map reaches 100%, which is better than using any single map alone. Hooray!
