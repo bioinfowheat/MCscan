@@ -1,10 +1,10 @@
 ## Introduction
 The ordering and orientation of genomic scaffolds to reconstruct chromosomes is an essential step during *de novo* genome assembly. This process is often assisted by various mapping techniques. Because each map provides a unique line of evidence, a combination of multiple maps can greatly improve the accuracy of the resulting chromosomal assemblies. ALLMAPS is capable of computing a scaffold ordering that maximizes the colinearity to a collection of maps, including genetic, physical or comparative maps into the final chromosome build. We highlight several salient features of ALLMAPS. 
 
-* Clear, computable objective which is to maximize the sum of colinearity of multiple input maps, leading to better reproducibility
-* Allow variable weights in input maps, leading to better control in conflict resolution
-* Can incorporate many mapping evidence, including genetic map, optical map and cross-species synteny, requiring minimal transformation
-* Streamline the genome build (with FASTA and AGP outputs) and genome update (with CHAIN output).
+* Clear, computable objective which is to maximize the colinearity to multiple input maps - **reproducible**
+* Allow variable weights in input maps, leading to better control in conflict resolution - **flexible**
+* Can incorporate many mapping evidence, requiring minimal transformation - **powerful**
+* Streamline the genome build (with FASTA and AGP outputs) and genome update (with CHAIN output) - **easy-to-use**
 
 ## Installation
 ### Python dependencies
