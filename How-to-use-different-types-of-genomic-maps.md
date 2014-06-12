@@ -1,0 +1,5 @@
+The walk-through example was given in anchoring based on genetic maps. ALLMAPS has the ability to go beyond genetic maps to use other types of genomic maps. A combination of several independent lines of evidence will further complement each other in different regions of the genome. One obstacle is that other genomic maps may require some data transformation before being imported into ALLMAPS. 
+
+We note that a generalized form of genomic maps is constituted by markers represented as (x, y) – each marker having a coordinate on the genomic scaffolds (x) and another coordinate on the map (y), respectively. As long as the map can be convert into a list of abstract ‘markers’ carrying these two coordinates, they can be easily integrated in a unified framework.
+
+![](https://lh6.googleusercontent.com/-2pYu193d6_I/U5kX1EObq2I/AAAAAAAAhhg/qeHux8nzQt8/w960-h720-no/Figure-5-integrated-maps.png)
