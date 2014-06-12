@@ -3,7 +3,7 @@ The ordering and orientation of genomic scaffolds to reconstruct chromosomes is 
 
 * Clear, computable objective which is to maximize the colinearity to multiple input maps - **reproducible**
 * Allow variable weights in input maps, leading to better control in conflict resolution - **flexible**
-* Can incorporate many mapping evidence, requiring minimal transformation - **powerful**
+* Can incorporate [many mapping evidence](https://github.com/tanghaibao/jcvi/wiki/How-to-use-different-types-of-genomic-maps), requiring minimal transformation - **powerful**
 * Streamline the genome build (with FASTA and AGP outputs) and genome update (with CHAIN output) - **easy-to-use**
 
 ## Installation
