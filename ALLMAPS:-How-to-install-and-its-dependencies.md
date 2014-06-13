@@ -91,4 +91,4 @@ $ wget https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS-testdata/ALLMAP
 $ unzip ALLMAPS-testdata.zip
 $ cd ALLMAPS-testdata
 $ sh run.sh
-
+```
