@@ -127,3 +127,6 @@ Scaffolds with >=4 markers                      9           0
 -------------------------------------------------------------
 ```
 The anchor rate for the consensus map reaches 100%, which is better than using any single map alone. Hooray!
+
+## Real-world examples
+Two studies `medicago` and `yellow-catfish`, described in details in the ALLMAPS manuscript, can be run to get further familiarized with ALLMAPS. These data can be downloaded here as [ALLMAPS supporting data](http://de.iplantcollaborative.org/dl/d/48180155-2325-4F5A-B677-215913C72E69/ALLMAPS-supporting-data.zip). See `run.sh` in respective folder on running ALLMAPS on these two data sets. 
