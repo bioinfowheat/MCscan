@@ -17,7 +17,6 @@ Phenotyping plant organs (seeds, flowers, leaves, fruits, nuts) is important in 
 * [scikit-image](http://scikit-image.org/)
 * [pypdf2](http://mstamy2.github.io/PyPDF2/)
 * [wand](http://docs.wand-py.org/en/0.3.7/)
-* [pytesseract](https://github.com/madmaze/python-tesseract)
 * [colormath](https://github.com/gtaylor/python-colormath)
 * [xlrd/xlwt](http://www.python-excel.org/)
 
@@ -38,4 +37,4 @@ If you are somehow stuck, please check out [our installation guide in heavy deta
 
 ## Walk-through example
 
-See more examples at the [GRABSEEDS Gallery](https://github.com/tanghaibao/jcvi/wiki/GRABSEEDS:-How-to-install).
+See more examples at the [GRABSEEDS Gallery](https://github.com/tanghaibao/jcvi/wiki/GRABSEEDS:-Gallery).
