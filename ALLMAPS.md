@@ -3,7 +3,7 @@ The ordering and orientation of genomic scaffolds to reconstruct chromosomes is 
 
 * Clear, computable objective which is to maximize the colinearity to multiple input maps - **reproducible**
 * Allow variable weights in input maps, leading to better control in conflict resolution - **flexible**
-* Can incorporate [many mapping evidence](wiki/ALLMAPS:-How-to-use-different-types-of-genomic-maps), requiring minimal transformation - **powerful**
+* Can incorporate [many mapping evidence](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-use-different-types-of-genomic-maps), requiring minimal transformation - **powerful**
 * Streamline the genome build (with FASTA and AGP outputs) and genome update (with CHAIN output) - **easy-to-use**
 
 ## Installation
@@ -39,7 +39,7 @@ $ git clone git@github.com:tanghaibao/jcvi-bin.git
 $ cp jcvi-bin/bin/* /usr/local/bin
 ```
 
-If they fail to execute, please get concorde from [here] (http://www.math.uwaterloo.ca/tsp/concorde.html), faSize/liftOver from [here](http://hgdownload.cse.ucsc.edu/admin/jksrc.zip) and recompile if necessary. If you are somehow stuck, please check out [our installation guide in heavy details](wiki/ALLMAPS:-How-to-install).
+If they fail to execute, please get concorde from [here] (http://www.math.uwaterloo.ca/tsp/concorde.html), faSize/liftOver from [here](http://hgdownload.cse.ucsc.edu/admin/jksrc.zip) and recompile if necessary. If you are somehow stuck, please check out [our installation guide in heavy details](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-install).
 
 ## Walk-through example
 We would like to use a small example to showcase what you can do with ALLMAPS. In this example, we have two maps, and scaffold sequences. Our goal is to use the two maps, to order and orient the genomic scaffolds into chromosomes. Download the test dataset [here](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS-testdata/ALLMAPS-testdata.zip). We have the following files:
@@ -58,7 +58,7 @@ Scaffold ID, scaffold position, LG, genetic position
 You can do this in EXCEL, but remember to save as "comma-separated format".
 ![Save file in CSV](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS-testdata/CSV-saving.png)
 
-For the test maps, both maps are properly formatted, so you can skip this step. Additionally, please note that ALLMAPS support a wide array of mapping evidence. For possible conversion for your own data, check article on [How to use different types of genomic maps](wiki/ALLMAPS:-How-to-use-different-types-of-genomic-maps).
+For the test maps, both maps are properly formatted, so you can skip this step. Additionally, please note that ALLMAPS support a wide array of mapping evidence. For possible conversion for your own data, check article on [How to use different types of genomic maps](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-use-different-types-of-genomic-maps).
 
 ##### Step 2. Merge the two maps together
 ```
