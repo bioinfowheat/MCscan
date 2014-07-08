@@ -58,7 +58,7 @@ Scaffold ID, scaffold position, LG, genetic position
 You can do this in EXCEL, but remember to save as "comma-separated format".
 ![Save file in CSV](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS-testdata/CSV-saving.png)
 
-For the test maps, both maps are properly formatted, so you can skip this step. Additionally, please note that ALLMAPS support a wide array of mapping evidence. For possible conversion for your own data, check article on [How to use different types of genomic maps](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-install-and-its-dependencies).
+For the test maps, both maps are properly formatted, so you can skip this step. Additionally, please note that ALLMAPS support a wide array of mapping evidence. For possible conversion for your own data, check article on [How to use different types of genomic maps](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-install).
 
 ##### Step 2. Merge the two maps together
 ```
