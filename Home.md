@@ -3,4 +3,7 @@ Welcome to the jcvi wiki! To use `jcvi` as a generic Bioinformatics library, ple
 ## Applications
 
 #### [ALLMAPS](wiki/ALLMAPS)
-ALLMAPS is a program that can anchor scaffolds onto linkage groups to reconstruct chromosomal assemblies.
+ALLMAPS anchors genomic scaffolds onto linkage groups to reconstruct chromosomal assemblies.
+
+#### [GRABSEEDS](wiki/GRABSEEDS)
+GRABSEEDS facilitates computerized extraction of object features and text labels from digital images in large phenotyping experiments. 
