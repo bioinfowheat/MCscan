@@ -85,7 +85,7 @@ $ git clone git@github.com:tanghaibao/jcvi.git       ###make sure you have githu
 $ export PYTHONPATH=/home/username/code:$PYTHONPATH  ###make sure this code directory is on your PYTHONPATH
 ```
 
-###9. test sample data
+###9. Test sample data
 ```
 $ wget https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS-testdata/ALLMAPS-testdata.zip
 $ unzip ALLMAPS-testdata.zip
