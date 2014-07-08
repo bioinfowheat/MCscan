@@ -39,7 +39,7 @@ $ git clone git@github.com:tanghaibao/jcvi-bin.git
 $ cp jcvi-bin/bin/* /usr/local/bin
 ```
 
-If they fail to execute, please get concorde from [here] (http://www.math.uwaterloo.ca/tsp/concorde.html), faSize/liftOver from [here](http://hgdownload.cse.ucsc.edu/admin/jksrc.zip) and recompile if necessary. If you are somehow stuck, please check out [our installation guide in heavy details](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-install-and-its-dependencies).
+If they fail to execute, please get concorde from [here] (http://www.math.uwaterloo.ca/tsp/concorde.html), faSize/liftOver from [here](http://hgdownload.cse.ucsc.edu/admin/jksrc.zip) and recompile if necessary. If you are somehow stuck, please check out [our installation guide in heavy details](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-install).
 
 ## Walk-through example
 We would like to use a small example to showcase what you can do with ALLMAPS. In this example, we have two maps, and scaffold sequences. Our goal is to use the two maps, to order and orient the genomic scaffolds into chromosomes. Download the test dataset [here](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS-testdata/ALLMAPS-testdata.zip). We have the following files:
