@@ -1,31 +1,26 @@
-###1. Install numpy
+### External dependencies
+* [ImageMagick](http://www.imagemagick.org/)
+* [tesseract-ocr](https://code.google.com/p/tesseract-ocr/)
+
+### Python dependencies
+* [scipy](http://www.scipy.org/)
+* [matplotlib](http://matplotlib.org/)
+* [brewer2mpl](https://github.com/jiffyclub/brewer2mpl)
+* [scikit-image](http://scikit-image.org/)
+* [pypdf2](http://mstamy2.github.io/PyPDF2/)
+* [wand](http://docs.wand-py.org/en/0.3.7/)
+* [colormath](https://github.com/gtaylor/python-colormath)
+* [xlrd/xlwt](http://www.python-excel.org/)
+
+Most of the Python libraries can be installed using `easy_install` or `pip install`, for example:
 ```
-$ wget http://sourceforge.net/projects/numpy/files/NumPy/1.8.1/numpy-1.8.1.tar.gz
-$ tar -zxvf numpy-1.8.1.tar.gz 
-$ python setup.py build
-$ python setup.py install --user
+easy_install wand
 ```
-###2. Install matplotlib
+
+Finally, make sure that you install [jcvi](https://github.com/tanghaibao/jcvi/) repository and put the directory on your `PYTHONPATH`. For example if you want to install it to `~/code`, do the following:
 ```
-$ wget https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.3.1/matplotlib-1.3.1.tar.gz
-$ tar -zxvf matplotlib-1.3.1.tar.gz
-$ cd matplotlib-1.3.1
-$ python setup.py build
-$ python setup.py install --user
+$ cd ~/code
+$ git clone git@github.com:tanghaibao/jcvi.git
+$ export PYTHONPATH=~/code:$PYTHONPATH
 ```
-###3. Install brewer2mpl
-```
-download package from https://github.com/jiffyclub/brewer2mpl
-$ unzip brewer2mpl-master.zip 
-$ cd brewer2mpl-master/
-$ python setup.py build
-$ python setup.py install --user
-```
-###4. Install GRABSEEDS
-```
-$ mkdir code
-$ cd code
-$ git clone git@github.com:tanghaibao/jcvi.git       ###make sure you have github access
-$ export PYTHONPATH=/home/username/code:$PYTHONPATH  ###make sure this code directory is on your PYTHONPATH
-```
-###5. Test sample data
+To avoid setting `PYTHONPATH` everytime, please insert the last command in your `.bashrc` or `.bash_profile`.
