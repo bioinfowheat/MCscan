@@ -7,7 +7,6 @@ GRABSEEDS make heavy use of image manipulation and text recognition libraries an
 ### Python dependencies
 * [scipy](http://www.scipy.org/)
 * [matplotlib](http://matplotlib.org/)
-* [brewer2mpl](https://github.com/jiffyclub/brewer2mpl)
 * [scikit-image](http://scikit-image.org/)
 * [pypdf2](http://mstamy2.github.io/PyPDF2/)
 * [wand](http://docs.wand-py.org/en/0.3.7/)
