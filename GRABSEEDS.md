@@ -9,7 +9,24 @@ Phenotyping plant organs (seeds, flowers, leaves, fruits, nuts) is important in 
 ## Installation
 Please check out [our installation guide](https://github.com/tanghaibao/jcvi/wiki/GRABSEEDS:-How-to-install).
 
-## Walk-through example
+## Walk-through examples
+Examples below show the command line usage of GRABSEEDS, in particular, how to set parameters for more accurate feature extractions.
 
-### Gallery
+#### Default
+
+#### Noisy background (``--sigma``)
+
+#### Blur edges (``--kernel``)
+
+#### Size filtering (``--minsize``, ``--maxsize``)
+
+#### Overlapping seeds (``--watershed``)
+
+#### Image cropping (``--rows``, ``--cols``)
+
+#### Text label (``--labelrows``, ``--labelcols``)
+
+#### Batch mode (``batchseeds``)
+
+## Gallery
 See more examples at the [GRABSEEDS Gallery](https://github.com/tanghaibao/jcvi/wiki/GRABSEEDS:-Gallery).
