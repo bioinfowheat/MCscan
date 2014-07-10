@@ -13,7 +13,6 @@ The ordering and orientation of genomic scaffolds to reconstruct chromosomes is 
 * [DEAP](https://code.google.com/p/deap/)
 * [NetworkX](https://networkx.github.io/)
 * [Matplotlib](http://matplotlib.org) (required only for plotting)
-* [brewer2mpl](https://github.com/jiffyclub/brewer2mpl) (required only for plotting)
 
 Most of the Python libraries can be installed using `easy_install` or `pip install`, for example:
 ```
