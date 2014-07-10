@@ -1,3 +1,5 @@
+GRABSEEDS make heavy use of image manipulation and text recognition libraries and software. Please be patient and install the dependencies listed below. 
+
 ### External dependencies
 * [ImageMagick](http://www.imagemagick.org/)
 * [tesseract-ocr](https://code.google.com/p/tesseract-ocr/)
