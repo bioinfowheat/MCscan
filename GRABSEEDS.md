@@ -11,4 +11,5 @@ Please check out [our installation guide](https://github.com/tanghaibao/jcvi/wik
 
 ## Walk-through example
 
+### Gallery
 See more examples at the [GRABSEEDS Gallery](https://github.com/tanghaibao/jcvi/wiki/GRABSEEDS:-Gallery).
