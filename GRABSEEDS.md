@@ -12,8 +12,6 @@ Please check out [our installation guide](https://github.com/tanghaibao/jcvi/wik
 ## Walk-through examples
 Examples below show the command line usage of GRABSEEDS, in particular, how to set parameters for more accurate feature extractions.
 
-#### Default
-
 #### Noisy background (``--sigma``)
 
 #### Blur edges (``--kernel``)
@@ -25,6 +23,8 @@ Examples below show the command line usage of GRABSEEDS, in particular, how to s
 #### Image cropping (``--rows``, ``--cols``)
 
 #### Text label (``--labelrows``, ``--labelcols``)
+
+#### Calibration (``calibrate``)
 
 #### Batch mode (``batchseeds``)
 
