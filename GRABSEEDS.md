@@ -38,7 +38,7 @@ Consider increase ``--kernel`` value to ensure that the objects are properly fil
 ### Size filtering (``--minsize``, ``--maxsize``)
 In the following example, the default settings identified a smaller object (ruler).
 ![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/sizeselection0.png)
-Use ``--minsize`` cutoff effectively removes the artifact, default ``minsize=0.0005``, ``maxsize=0.5`` which corresponds to any object with pixel counts that are between 0.05% to 50% of the entire photo.
+Use ``--minsize`` cutoff effectively removes the artifact, default ``--minsize=.0005``, ``--maxsize=.5`` which corresponds to any object with pixel counts that are between 0.05% to 50% of the entire photo. The command below changes the lower cutoff to ``.01``.
 ```
 python -m jcvi.graphics.grabseeds seeds sizeselection.JPG --minsize=.01
 ```
@@ -63,7 +63,7 @@ python -m jcvi.graphics.grabseeds seeds label.JPG --rows=:800
 ![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/label1.png)
 
 ### Text label (``--labelrows``, ``--labelcols``)
-To fully automate phenotyping pipeline, placing a text label next to the seeds is a good idea. The packaging in the previous example contains text. Similarly to cropping the image area, ``--labelrows=1200:`` tells the program to run OCR starting on row 1200.
+To fully automate phenotyping pipeline, placing a text label next to the seeds is a good idea. The packaging in the previous example contains text. Similarly to cropping the image area, ``--labelrows=1200:`` tells the program to run OCR starting on row 1200. Consequently the following command extracts the label as *2013 Sh Backcross 401O2B*.
 ```
 python -m jcvi.graphics.grabseeds seeds label.JPG --rows=:800 --labelrows=1200:
 ```
