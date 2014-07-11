@@ -45,12 +45,32 @@ python -m jcvi.graphics.grabseeds seeds sizeselection.JPG --minsize=.01
 ![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/sizeselection.png)
 
 ### Overlapping seeds (``--watershed``)
+In the following example, the shadow connect the seeds into one giant object.
+![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/touching0.png)
+Use ``--watershed`` to run the watershed algorithm to separate overlapping objects.
+```
+python -m jcvi.graphics.grabseeds seeds touching.JPG --watershed
+```
+![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/touching.png)
 
 ### Image cropping (``--rows``, ``--cols``)
+In the following example, the image contains a package that interfere with the seed recognition.
+![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/label0.png)
+The solution is to extract certain rows (or columns) from original image, for example ``--rows=:800`` will extract the first 800 rows. Please use the coordinates on the axes of the image as a guide.
+```
+python -m jcvi.graphics.grabseeds seeds label.JPG --rows=:800
+```
+![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/label1.png)
 
 ### Text label (``--labelrows``, ``--labelcols``)
+To fully automate phenotyping pipeline, placing a text label next to the seeds is a good idea. The packaging in the previous example contains text. Similarly to cropping the image area, ``--labelrows=1200:`` tells the program to run OCR starting on row 1200.
+```
+python -m jcvi.graphics.grabseeds seeds label.JPG --rows=:800 --labelrows=1200:
+```
+![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/label2.png)
 
 ### Calibration (``calibrate``)
+![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/calibration.png)
 
 ### Batch mode (``batchseeds``)
 
