@@ -20,30 +20,39 @@ python -m jcvi.graphics.grabseeds seeds test.JPG
 This command generates a PDF file for debugging purposes while all the identified objects will be written to stdout. The PDF output contains object information layered onto original image. The four panels contain **Original picture**, **Edge detection**, **Object detection**, **Object list**, respectively. These panels are useful in finding the best parameter for object detection.
 ![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/test.png)
 
-#### Noisy background (``--sigma``)
-When the background is non-uniform and contain texture (for example, cloth), increase ``--sigma`` value (default sigma=1). For example, using the default sigma=1 identifies certain features that interfere with the real objects.
-```
-python -m jcvi.graphics.grabseeds seeds noisy.JPG
-```
+### Noisy background (``--sigma``)
+In the following example, the default settings identified certain features that interfere with the real objects.
 ![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/noisy0.png)
+When the background is non-uniform and contain texture (for example, cloth), increase ``--sigma`` value. 
 ```
 python -m jcvi.graphics.grabseeds seeds noisy.JPG --sigma=2
 ```
-https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/noisy.png
+![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/noisy.png)
 
-#### Blur edges (``--kernel``)
+### Blur edges (``--kernel``)
+In the following example, the default settings correctly identified the objects but not the entire region, so the area calculation will be inaccurate. 
+![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/bluredges0.png)
+Consider increase ``--kernel`` value to ensure that the objects are properly filled.
+![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/bluredges.png)
 
-#### Size filtering (``--minsize``, ``--maxsize``)
+### Size filtering (``--minsize``, ``--maxsize``)
+In the following example, the default settings identified a smaller object (ruler).
+![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/sizeselection0.png)
+Use ``--minsize`` cutoff effectively removes the artifact, default ``minsize=0.0005``, ``maxsize=0.5`` which corresponds to any object with pixel counts that are between 0.05% to 50% of the entire photo.
+```
+python -m jcvi.graphics.grabseeds seeds sizeselection.JPG --minsize=.01
+```
+![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/sizeselection.png)
 
-#### Overlapping seeds (``--watershed``)
+### Overlapping seeds (``--watershed``)
 
-#### Image cropping (``--rows``, ``--cols``)
+### Image cropping (``--rows``, ``--cols``)
 
-#### Text label (``--labelrows``, ``--labelcols``)
+### Text label (``--labelrows``, ``--labelcols``)
 
-#### Calibration (``calibrate``)
+### Calibration (``calibrate``)
 
-#### Batch mode (``batchseeds``)
+### Batch mode (``batchseeds``)
 
 ## Gallery
 See more examples at the [GRABSEEDS Gallery](https://github.com/tanghaibao/jcvi/wiki/GRABSEEDS:-Gallery).
