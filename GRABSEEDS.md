@@ -4,14 +4,12 @@ Phenotyping plant organs (seeds, flowers, leaves, fruits, nuts) is important in 
 * Work on seeds, leaves and flowers from a set of organisms
 * Easy to use, command line interface, runs fast
 * Robust against lighting condition, noisy background and overlapping seeds
-* Text recognition towards full automation of seed phenotyping projects
+* Label recognition towards full automation of seed phenotyping projects
 
 ## Installation
 Please check out [our installation guide](https://github.com/tanghaibao/jcvi/wiki/GRABSEEDS:-How-to-install).
 
-## Walk-through examples
-Examples below show the command line usage of GRABSEEDS, in particular, how to set parameters for more accurate feature extractions.
-
+## Single image processing
 To process single image, for example, ``test.JPG``, run this command:
 ```
 python -m jcvi.graphics.grabseeds seeds test.JPG
@@ -85,10 +83,13 @@ python -m jcvi.graphics.grabseeds seeds label.JPG --rows=:800 --labelrows=1200:
 ```
 ![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/label2.png)
 
+## Batch processing
 ### Calibration (``calibrate``)
 ![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/calibration.png)
 
 ### Batch mode (``batchseeds``)
+
+### Best practice for batch processing
 
 ## Gallery
 See more examples at the [GRABSEEDS Gallery](https://github.com/tanghaibao/jcvi/wiki/GRABSEEDS:-Gallery).
