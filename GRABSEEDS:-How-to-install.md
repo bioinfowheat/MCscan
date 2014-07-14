@@ -2,7 +2,10 @@ GRABSEEDS make heavy use of image manipulation and text recognition libraries an
 
 ### External dependencies
 * [ImageMagick](http://www.imagemagick.org/)
+    - ``libmagickwand-dev`` for APT on Debian/Ubuntu
+    - ``ImageMagick-devel`` for Yum on CentOS
 * [tesseract-ocr](https://code.google.com/p/tesseract-ocr/)
+    - Make sure that you can run ``tesseract`` on the command line (i.e. in your ``PATH``).
 
 ### Python dependencies
 * [scipy](http://www.scipy.org/)
