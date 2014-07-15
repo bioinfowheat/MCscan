@@ -10,6 +10,8 @@ Phenotyping plant organs (seeds, flowers, leaves, fruits, nuts) is important in 
 Please check out [our installation guide](https://github.com/tanghaibao/jcvi/wiki/GRABSEEDS:-How-to-install).
 
 ## Single image processing
+*Please note: the following image examples can be downloaded [here](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/test-data.zip).*
+
 To process single image, for example, ``test.JPG``, run this command:
 ```
 python -m jcvi.graphics.grabseeds seeds test.JPG
