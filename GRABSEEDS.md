@@ -44,9 +44,9 @@ If the photo sessions are long and separated on multiple days, it may be importa
 - Normalize the effect of lighting and correct the RGB code
 - Yield stable results when camera settings, lighting, or lens-to-table distance varies
 
-We recommend using a [ColorChecker](http://en.wikipedia.org/wiki/ColorChecker) to perform the calibration. You can make your own one by printing [this](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/colorchecker.pdf) out.
+We recommend using a [ColorChecker](http://en.wikipedia.org/wiki/ColorChecker) to perform the calibration. You can make your own one by printing [this](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/colorchecker.pdf) out, and then snap a picture of it. We recommend you later rename this file ``calibrate.JPG`` and place it alongside with the images of the same batch.
 
-Now measure the individual boxes on the paper and record the size in squared cm units. Let's say the size is 1cm2. Then your calibration command would be:
+Now measure the individual boxes on the paper and record the size in squared cm units. Let's say the size is 1cm2. Your calibration command would be:
 ```
 python -m jcvi.graphics.grabseeds calibrate batch/calibrate.JPG 1
 ```
@@ -85,6 +85,20 @@ For the curious mind, `calibrate.json` includes the pixel-cm-ratio and the RGB l
 ```
 
 ## Batch processing
-### Batch mode
+Batch processing uses the same command interface as single image processing. However, instead of ``seeds``, use ``batchseeds``.
+
+First, run the calibration if needed, note that you have to replace ``1`` with the real box size that you measured in the ColorChecker printout.
+```
+python -m jcvi.graphics.grabseeds calibrate batch/calibrate.JPG 1
+```
+Next, run the batch processing on a folder, for example, ``batch`` below. The batch processing will assume each image within this folder uses the same image processing (like cropping, de-noising). For example:
+```
+python -m jcvi.graphics.grabseeds batchseeds batch --rows=:800 --labelrows=1200:
+```
+
+The batch processing generates a combined PDF ``batch-output.pdf`` for visual debugging, and ``batch-output.tsv`` for the data in spreadsheet format.
+
+![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/screenshot.png)
 
 ### Best practice for batch processing
+We have a few recommendations with regards to large phenotyping experiments:
