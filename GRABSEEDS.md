@@ -38,10 +38,53 @@ python -m jcvi.graphics.grabseeds seeds label.JPG --rows=:800 --labelrows=1200:
 ## Improve recognition accuracy
 Please see more examples at [GRABSEEDS: How to tune accuracy](https://github.com/tanghaibao/jcvi/wiki/GRABSEEDS:-How-to-tune-accuracy).
 
-## Batch processing
-### Calibration (``calibrate``)
+## Calibration (``calibrate``)
+If the photo sessions are long and separated on multiple days, it may be important to calibrate before each batch of images. The calibration serves two purposes:
+- Calculate pixel-to-inch ratio, then the seed length and width can be converted to inch or cm
+- Normalize the effect of lighting and correct the RGB code
+- Yield stable results when camera settings, lighting, or lens-to-table distance varies
+
+We recommend using a [ColorChecker](http://en.wikipedia.org/wiki/ColorChecker) to perform the calibration. You can make your own one by printing [this](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/colorchecker.pdf) out.
+
+Now measure the individual boxes on the paper and record the size in squared cm units. Let's say the size is 1cm2. Then your calibration command would be:
+```
+python -m jcvi.graphics.grabseeds calibrate batch/calibrate.JPG 1
+```
 ![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/calibrate.png)
 
+It is important to check the PDF debugging file afterwards to make sure the calibration is done properly:
+- It must properly identifies most of the 24 boxes
+- Make sure to orient your ColorChecker correctly, not upside-down
+
+The calibration generates a `calibrate.json` file, which you can then use to correct the size and color in the image processing. For example:
+```
+python -m jcvi.graphics.grabseeds seeds test.JPG --calibrate=batch/calibrate.json
+```
+For the curious mind, `calibrate.json` includes the pixel-cm-ratio and the RGB linear transform.
+```
+{
+    "PixelCMratio": 200.0787345021954,
+    "RGBtransform": [
+        [
+            1.1742493588325145,
+            0.20095099843680092,
+            -0.15413310306171132
+        ],
+        [
+            0.10358271788195579,
+            1.2457001216676802,
+            -0.01189225811915571
+        ],
+        [
+            0.11473041282784162,
+            0.15234061501666415,
+            1.1957963092234285
+        ]
+    ]
+}
+```
+
+## Batch processing
 ### Batch mode (``batchseeds``)
 
 ### Best practice for batch processing
