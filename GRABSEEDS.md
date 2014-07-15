@@ -102,3 +102,8 @@ The batch processing generates a combined PDF ``batch-output.pdf`` for visual de
 
 ### Best practice for batch processing
 We have a few recommendations with regards to large phenotyping experiments:
+- Zoom onto the seeds and make them appear bigger in photo
+- Avoid shadow at all cost and use a background with little texture (less noise). See a poor man's setup below.
+- Store each batch of images in the same folder. Identify the calibration photo, and rename it as ``calibrate.JPG``.
+
+![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/poorman.jpg)
