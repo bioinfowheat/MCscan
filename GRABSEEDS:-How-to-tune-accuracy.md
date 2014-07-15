@@ -1,5 +1,7 @@
 Examples below show the command line usage of GRABSEEDS, in particular, how to set parameters for more accurate feature extractions.
 
+*Please note: the following image examples can be downloaded [here](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/test-data.zip).*
+
 ### Noisy background (``--sigma``)
 In the following example, the default settings identified certain features that interfere with the real objects.
 ![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/noisy0.png)
