@@ -39,7 +39,7 @@ python -m jcvi.graphics.grabseeds seeds label.JPG --rows=:800 --labelrows=1200:
 Please see more examples at [GRABSEEDS: How to tune accuracy](https://github.com/tanghaibao/jcvi/wiki/GRABSEEDS:-How-to-tune-accuracy).
 
 ## Calibration
-If the photo sessions are long and separated on multiple days, it may be important to calibrate before each batch of images. The calibration serves two purposes:
+If the photo sessions are long and separated on multiple days, it may be important to calibrate before each batch of images. The calibration serves several purposes:
 - Calculate pixel-to-inch ratio, then the seed length and width can be converted to inch or cm
 - Normalize the effect of lighting and correct the RGB code
 - Yield stable results when camera settings, lighting, or lens-to-table distance varies
