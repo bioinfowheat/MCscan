@@ -1,5 +1,0 @@
-## Seeds
-
-## Flowers
-
-## Fruits
