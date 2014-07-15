@@ -34,11 +34,11 @@ python -m jcvi.graphics.grabseeds seeds label.JPG --rows=:800 --labelrows=1200:
 ![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/label2.png)
 
 ## Improve recognition accuracy
-Please see more examples at [GRABSEEDS: How to improve accuracy](https://github.com/tanghaibao/jcvi/wiki/GRABSEEDS:-How-to-improve-accuracy).
+Please see more examples at [GRABSEEDS: How to tune accuracy](https://github.com/tanghaibao/jcvi/wiki/GRABSEEDS:-How-to-tune-accuracy).
 
 ## Batch processing
 ### Calibration (``calibrate``)
-![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/calibration.png)
+![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/calibrate.png)
 
 ### Batch mode (``batchseeds``)
 
