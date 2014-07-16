@@ -13,7 +13,6 @@ GRABSEEDS make heavy use of image manipulation and text recognition libraries an
 * [scikit-image](http://scikit-image.org/)
 * [pypdf2](http://mstamy2.github.io/PyPDF2/)
 * [wand](http://docs.wand-py.org/en/0.3.7/)
-* [colormath](https://github.com/gtaylor/python-colormath)
 
 Most of the Python libraries can be installed using `easy_install` or `pip install`, for example:
 ```
