@@ -60,7 +60,8 @@ The calibration generates a `calibrate.json` file, which you can then use to cor
 ```
 python -m jcvi.graphics.grabseeds seeds test.JPG --calibrate=batch/calibrate.json
 ```
-For the curious mind, `calibrate.json` includes the pixel-cm-ratio and the RGB linear transform.
+For the curious mind, `calibrate.json` includes the pixel-cm-ratio and the RGB linear transform matrix used in color correction.
+![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/formula.png)
 ```
 {
     "PixelCMratio": 200.0787345021954,
