@@ -22,7 +22,7 @@ easy_install deap
 Finally, make sure that you install [jcvi](https://github.com/tanghaibao/jcvi/) repository and put the directory on your `PYTHONPATH`. For example if you want to install it to `~/code`, do the following:
 ```
 $ cd ~/code
-$ git clone git@github.com:tanghaibao/jcvi.git
+$ git clone git://github.com/tanghaibao/jcvi.git
 $ export PYTHONPATH=~/code:$PYTHONPATH
 ```
 To avoid setting `PYTHONPATH` everytime, please insert the last command in your `.bashrc` or `.bash_profile`.
@@ -34,7 +34,7 @@ To avoid setting `PYTHONPATH` everytime, please insert the last command in your 
 
 These external dependencies are available in my repo [jcvi-bin](https://github.com/tanghaibao/jcvi-bin), which are compiled on Linux (CentOS6). You need to copy the following binaries to a directory that's on you `PATH`.
 ```
-$ git clone git@github.com:tanghaibao/jcvi-bin.git
+$ git clone git://github.com/tanghaibao/jcvi-bin.git
 $ cp jcvi-bin/bin/* /usr/local/bin
 ```
 
