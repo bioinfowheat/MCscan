@@ -79,7 +79,7 @@ $ export PATH=~/bin                 ### make sure that ~/bin is on your path as 
 ```
 $ mkdir code
 $ cd code
-$ git clone git@github.com:tanghaibao/jcvi.git       ###make sure you have github access
+$ git clone git://github.com/tanghaibao/jcvi.git     ###make sure you have github access
 $ export PYTHONPATH=/home/username/code:$PYTHONPATH  ###make sure this code directory is on your PYTHONPATH
 ```
 
