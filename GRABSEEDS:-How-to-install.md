@@ -22,7 +22,7 @@ easy_install wand
 Finally, make sure that you install [jcvi](https://github.com/tanghaibao/jcvi/) repository and put the directory on your `PYTHONPATH`. For example if you want to install it to `~/code`, do the following:
 ```
 $ cd ~/code
-$ git clone git@github.com:tanghaibao/jcvi.git
+$ git clone git://github.com/tanghaibao/jcvi.git
 $ export PYTHONPATH=~/code:$PYTHONPATH
 ```
 To avoid setting `PYTHONPATH` everytime, please insert the last command in your `.bashrc` or `.bash_profile`.
