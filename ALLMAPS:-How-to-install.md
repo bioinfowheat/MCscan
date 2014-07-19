@@ -45,10 +45,8 @@ $ python setup.py install --user
 ###6. Install JCVI dependencies: concorde, faSize and liftOver
 ####6.1 From github
 ```
-### If you have github access, the best way to install the dependencies is through github.
-### Please ask github how to get github SSH Keys: https://help.github.com/articles/generating-ssh-keys.
-$ git clone git@github.com:tanghaibao/jcvi-bin.git
-$ cp jcvi-bin/bin/* /usr/local/bin                  ###/usr/local/bin is your own PATH
+$ git clone git://github.com/tanghaibao/jcvi-bin.git
+$ cp jcvi-bin/bin/* /usr/local/bin                  ### /usr/local/bin is your own PATH
 ```
 ####6.2 Recompile
 ````
@@ -79,8 +77,8 @@ $ export PATH=~/bin                 ### make sure that ~/bin is on your path as 
 ```
 $ mkdir code
 $ cd code
-$ git clone git://github.com/tanghaibao/jcvi.git     ###make sure you have github access
-$ export PYTHONPATH=/home/username/code:$PYTHONPATH  ###make sure this code directory is on your PYTHONPATH
+$ git clone git://github.com/tanghaibao/jcvi.git     
+$ export PYTHONPATH=/home/username/code:$PYTHONPATH  ### make sure the directory is on your PYTHONPATH
 ```
 
 ###8. Test sample data
