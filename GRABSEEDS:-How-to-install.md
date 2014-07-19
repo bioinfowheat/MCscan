@@ -19,7 +19,7 @@ Most of these Python libraries can be installed using `easy_install` or `pip ins
 ```
 easy_install scipy matplotlib scikit-image pypdf2 wand jcvi
 ```
-If you have problem installing the jcvi library, you can clone the [jcvi](https://github.com/tanghaibao/jcvi/) repository directly and put the directory on your `PYTHONPATH`. For example, if you want to install it to `~/code`, do the following:
+*Optional*: If you experience problem installing the jcvi library, you can clone the [jcvi](https://github.com/tanghaibao/jcvi/) repository directly and put the directory on your `PYTHONPATH`. For example, if you want to install it to `~/code`, do the following:
 ```
 $ cd ~/code
 $ git clone git://github.com/tanghaibao/jcvi.git
