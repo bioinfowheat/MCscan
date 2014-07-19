@@ -8,24 +8,18 @@ The ordering and orientation of genomic scaffolds to reconstruct chromosomes is 
 
 ## Installation
 ### Python dependencies
-* [Biopython](http://biopython.org/)
+* [Biopython](http://biopython.org)
 * [Numpy](http://numpy.org)
-* [DEAP](https://code.google.com/p/deap/)
-* [NetworkX](https://networkx.github.io/)
-* [Matplotlib](http://matplotlib.org) (required only for plotting)
+* [DEAP](https://code.google.com/p/deap)
+* [NetworkX](https://networkx.github.io)
+* [Matplotlib](http://matplotlib.org)
+* [jcvi](https://github.com/tanghaibao/jcvi)
 
-Most of the Python libraries can be installed using `easy_install` or `pip install`, for example:
+Most of these Python libraries can be installed using `easy_install` or `pip install`, for example:
 ```
-easy_install deap
+easy_install biopython numpy deap networkx matplotlib jcvi
 ```
-
-Finally, make sure that you install [jcvi](https://github.com/tanghaibao/jcvi/) repository and put the directory on your `PYTHONPATH`. For example if you want to install it to `~/code`, do the following:
-```
-$ cd ~/code
-$ git clone git://github.com/tanghaibao/jcvi.git
-$ export PYTHONPATH=~/code:$PYTHONPATH
-```
-To avoid setting `PYTHONPATH` everytime, please insert the last command in your `.bashrc` or `.bash_profile`.
+If you are somehow stuck, you might need to install the libraries manually, please check out [our installation guide in heavy details](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-install).
 
 ### External dependencies
 * concorde
@@ -133,4 +127,3 @@ Two studies `medicago` and `yellow-catfish`, described in details in the ALLMAPS
 http://dx.doi.org/10.6084/m9.figshare.1057746
 * Tang, Haibao (2014): ALLMAPS supporting data: Medicago genome assembly. figshare. 
 http://dx.doi.org/10.6084/m9.figshare.1057745
-
