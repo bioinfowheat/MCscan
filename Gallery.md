@@ -1,4 +1,4 @@
-Figures generated programmatic-ally in my past [research papers](http://scholar.google.com/citations?user=66lj2Z0AAAAJ). Many showcase the functionalities of the [``jcvi.graphics``](https://github.com/tanghaibao/jcvi/tree/master/graphics) module.
+Figures generated programmatically in Haibao's past [research papers](http://scholar.google.com/citations?user=66lj2Z0AAAAJ). Many showcase the functionalities of the [``jcvi.graphics``](https://github.com/tanghaibao/jcvi/tree/master/graphics) module.
 
 <table>
 <tr height="205" valign="top">
