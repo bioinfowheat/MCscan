@@ -7,3 +7,7 @@ ALLMAPS anchors genomic scaffolds onto linkage groups to reconstruct chromosomal
 
 #### [GRABSEEDS](wiki/GRABSEEDS)
 GRABSEEDS facilitates computerized extraction of object features and text labels from digital images in large phenotyping experiments. 
+
+## Gallery
+
+Please visit our [Gallery](wiki/Gallery) to see our graphics functionality for the production of publication-ready figures.
