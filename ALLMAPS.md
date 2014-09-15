@@ -35,7 +35,7 @@ $ cp jcvi-bin/bin/* /usr/local/bin
 If they fail to execute, please get concorde from [here] (http://www.math.uwaterloo.ca/tsp/concorde.html), faSize/liftOver from [here](http://hgdownload.cse.ucsc.edu/admin/jksrc.zip) and recompile if necessary. If you are somehow stuck, please check out [our installation guide in heavy details](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-install).
 
 ## Walk-through example
-We would like to use a small example to showcase what you can do with ALLMAPS. In this example, we have two maps, and scaffold sequences. Our goal is to use the two maps, to order and orient the genomic scaffolds into chromosomes. Download the test dataset [here](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS-testdata/ALLMAPS-testdata.zip). We have the following files:
+We would like to use a small example to showcase what you can do with ALLMAPS. In this example, we have two maps, and scaffold sequences. Our goal is to use the two maps, to order and orient the genomic scaffolds into chromosomes. Download the test dataset [here](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/ALLMAPS-testdata.zip). We have the following files:
 * scaffold sequences (`scaffolds.fasta`)
 * Map 1 (`JMMale.csv`)
 * Map 2 (`JMFemale.csv`)
@@ -46,16 +46,16 @@ That's it. Now let's watch how the magic unfolds.
 ```
 Scaffold ID, scaffold position, LG, genetic position
 ```
-![Genetic map format](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS-testdata/Map-format.png)
+![Genetic map format](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/Map-format.png)
 
 You can do this in EXCEL, but remember to save as "comma-separated format".
-![Save file in CSV](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS-testdata/CSV-saving.png)
+![Save file in CSV](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/CSV-saving.png)
 
 For the test maps, both maps are properly formatted, so you can skip this step. Additionally, please note that ALLMAPS support a wide array of mapping evidence. For possible conversion for your own data, check article on [How to use different types of genomic maps](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-use-different-types-of-genomic-maps).
 
-##### Step 2. Merge the two maps together
+##### Step 2. Merge the two maps together. This will generate a weights file (`weights.txt`) and the input bed file (`JM-2.bed`).
 ```
-python -m jcvi.assembly.allmaps merge JMMale.csv JMFemale.csv -o JM-2.bed
+python -m jcvi.assembly.allmaps merge JMMale.csv JMFemale.csv -p JM-2
 ```
 
 ##### Step 3. Modify the weights file (`weights.txt`) if needed. Default is every map set to weight of 1.
@@ -64,14 +64,14 @@ JMFemale 1
 JMMale 1
 ```
 
-##### Step 4. Run scaffold ordering, which takes your merged bed, weights file and original scaffold FASTA file.
+##### Step 4. Run scaffold ordering, which takes the input bed file and original scaffold FASTA file.
 ```
-python -m jcvi.assembly.allmaps path JM-2.bed weights.txt scaffolds.fasta
+python -m jcvi.assembly.allmaps path JM-2 scaffolds.fasta
 ```
 
 ##### Step 5. Build release
 ```
-python -m jcvi.assembly.allmaps build JM-2.chr.agp scaffolds.fasta JM-2.bed
+python -m jcvi.assembly.allmaps build JM-2 scaffolds.fasta
 ```
 
 We now have a release!
@@ -81,13 +81,13 @@ We now have a release!
 
 ##### Optional. Plot alignments
 ```
-python -m jcvi.assembly.allmaps plotall JM-2.lifted.bed JM-2.agp weights.txt
+python -m jcvi.assembly.allmaps plotall JM-2
 ```
-![chr23 alignments](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS-testdata/chr23.png)
+![chr23 alignments](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/chr23.png)
 
 ##### Optional. Summary statistics
 ```
-python -m jcvi.assembly.allmaps summary JM-2.chr.agp scaffolds.fasta JM-2.bed
+python -m jcvi.assembly.allmaps summary JM-2 scaffolds.fasta
 ```
 This command will create following tables, summarizing various stats before and after the scaffold anchoring.
 ```
