@@ -126,10 +126,15 @@ Scaffolds with >=4 markers                      9           0
 The anchor rate for the consensus map reaches 100%, which is better than using any single map alone. Hooray!
 
 #### Estimate gap lengths
-ALLMAPS can estimate sizes for inter-scaffold gaps, through the conversion from genetic distance (for example, centi-Morgan used in genetic maps) to physical distance. Please check out [ALLMAPS: How to estimate gap sizes](wiki/ALLMAPS:-How-to-estimate-gap-sizes) for details.
+ALLMAPS can estimate sizes for inter-scaffold gaps, through the conversion from genetic distance (for example, centi-Morgan used in genetic maps) to physical distance. The default inter-scaffold gap size is 100, which according to Genbank convention, indicates a gap with unknown size. The following command will re-estimate gap sizes based on distance conversion, and generate a new AGP file `JM-2.estimategaps.agp`.
+```
+python -m jcvi.assembly.allmaps estimategaps JM-2
+```
+
+For more details, please check out [ALLMAPS: How to estimate gap sizes](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-estimate-gap-sizes)
 
 #### Use different types of genomic maps in ALLMAPS
-The provided example is using genetic maps as input data. For conversion for other types of input data, please check out [How to use different types of genomic maps](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-use-different-types-of-genomic-maps).
+The above example assumes genetic maps as input data. For conversion from other types of input data, please check out [How to use different types of genomic maps](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-use-different-types-of-genomic-maps).
 
 ## Real-world examples
 Two studies `medicago` and `yellow-catfish`, described in details in the ALLMAPS manuscript, can be run to get further familiarized with ALLMAPS. See `run.sh` in respective folder on running ALLMAPS on these two data sets. 
