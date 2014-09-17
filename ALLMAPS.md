@@ -42,7 +42,7 @@ We would like to use a small example to showcase what you can do with ALLMAPS. I
 
 That's it. Now let's watch how the magic unfolds.
 
-##### Step 1. Prepare input data
+#### Step 1. Prepare input data
 ```
 Scaffold ID, scaffold position, LG, genetic position
 ```
@@ -51,25 +51,25 @@ Scaffold ID, scaffold position, LG, genetic position
 You can do this in EXCEL, but remember to save as "comma-separated format".
 ![Save file in CSV](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/CSV-saving.png)
 
-For the test maps, both maps are properly formatted, so you can skip this step. Additionally, please note that ALLMAPS support a wide array of mapping evidence. For possible conversion for your own data, check article on [How to use different types of genomic maps](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-use-different-types-of-genomic-maps).
+For the test maps, both maps are properly formatted, so you can skip this step. Additionally, please note that ALLMAPS support a wide array of mapping evidence. For possible conversion for your own data, check out article on [How to use different types of genomic maps](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-use-different-types-of-genomic-maps).
 
-##### Step 2. Merge the two maps together. This will generate a weights file (`weights.txt`) and the input bed file (`JM-2.bed`).
+#### Step 2. Merge the two maps together. This will generate a weights file (`weights.txt`) and the input bed file (`JM-2.bed`).
 ```
 python -m jcvi.assembly.allmaps merge JMMale.csv JMFemale.csv -p JM-2
 ```
 
-##### Step 3. Modify the weights file (`weights.txt`) if needed. Default is every map set to weight of 1.
+#### Step 3. Modify the weights file (`weights.txt`) if needed. Default is every map set to weight of 1.
 ```
 JMFemale 1
 JMMale 1
 ```
 
-##### Step 4. Run scaffold ordering, which takes the input bed file and original scaffold FASTA file.
+#### Step 4. Run scaffold ordering, which takes the input bed file and original scaffold FASTA file.
 ```
 python -m jcvi.assembly.allmaps path JM-2 scaffolds.fasta
 ```
 
-##### Step 5. Build release
+#### Step 5. Build release
 ```
 python -m jcvi.assembly.allmaps build JM-2 scaffolds.fasta
 ```
@@ -79,13 +79,15 @@ We now have a release!
 * `JM-2.agp` - order and orientations of the scaffolds, which can be used in Genbank submissions
 * `JM-2.chain` - useful to convert scaffold coordinates to new coordinates, for example, if you annotated gene models using the scaffolds, you can use this file along with `liftOver` to transfer the genes onto chromosomes
 
-##### Optional. Plot alignments
+
+## Advanced topics
+#### Plot alignments
 ```
 python -m jcvi.assembly.allmaps plotall JM-2
 ```
 ![chr23 alignments](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/chr23.png)
 
-##### Optional. Summary statistics
+#### Summary statistics
 ```
 python -m jcvi.assembly.allmaps summary JM-2 scaffolds.fasta
 ```
@@ -122,6 +124,12 @@ Scaffolds with >=4 markers                      9           0
 -------------------------------------------------------------
 ```
 The anchor rate for the consensus map reaches 100%, which is better than using any single map alone. Hooray!
+
+#### Estimate gap lengths
+ALLMAPS can estimate sizes for inter-scaffold gaps, through the conversion from genetic distance (for example, centi-Morgan used in genetic maps) to physical distance. Please check out [ALLMAPS: How to estimate gap sizes](wiki/ALLMAPS:-How-to-estimate-gap-sizes) for details.
+
+#### Use different types of genomic maps in ALLMAPS
+The provided example is using genetic maps as input data. For conversion for other types of input data, please check out [How to use different types of genomic maps](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-use-different-types-of-genomic-maps).
 
 ## Real-world examples
 Two studies `medicago` and `yellow-catfish`, described in details in the ALLMAPS manuscript, can be run to get further familiarized with ALLMAPS. See `run.sh` in respective folder on running ALLMAPS on these two data sets. 
