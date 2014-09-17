@@ -97,6 +97,7 @@ This command will create following tables, summarizing various stats before and 
 ----------------------------------------------------------------------
             Linkage Groups                     1                     1
                    Markers                    61                    59
+            Markers per Mb                   4.2                   4.3
              N50 Scaffolds                     5                     5
                  Scaffolds                    18                    18
    Scaffolds with 1 marker                     7                     7
@@ -110,6 +111,7 @@ Scaffolds with >=4 markers                     7                     6
                          o               Anchored    Unplaced
 -------------------------------------------------------------
                    Markers                    120           0
+            Markers per Mb                    7.9           0
              N50 Scaffolds                      5           0
                  Scaffolds                     22           0
    Scaffolds with 1 marker                      5           0
