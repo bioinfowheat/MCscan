@@ -26,7 +26,7 @@ If you are somehow stuck, you might need to install the libraries manually, plea
 * faSize
 * liftOver
 
-These external dependencies are available in my repo [jcvi-bin](https://github.com/tanghaibao/jcvi-bin), which are compiled on Linux (CentOS6). You need to copy the following binaries to a directory that's on you `PATH`.
+These external dependencies are available in my repo [jcvi-bin](https://github.com/tanghaibao/jcvi-bin). You need to copy the binaries to a directory that's on you `PATH`.
 ```
 $ git clone git://github.com/tanghaibao/jcvi-bin.git
 $ cp jcvi-bin/bin/* /usr/local/bin
