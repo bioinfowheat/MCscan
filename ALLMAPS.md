@@ -56,7 +56,7 @@ For the test maps, both maps are properly formatted, so you can skip this step. 
 
 #### Step 2. Merge the two maps together. This will generate a weights file (`weights.txt`) and the input bed file (`JM-2.bed`).
 ```
-python -m jcvi.assembly.allmaps merge JMMale.csv JMFemale.csv -p JM-2
+python -m jcvi.assembly.allmaps merge JMMale.csv JMFemale.csv -o JM-2.bed
 ```
 
 #### Step 3. Modify the weights file (`weights.txt`) if needed. Default is every map set to weight of 1.
@@ -67,32 +67,22 @@ JMMale 1
 
 #### Step 4. Run scaffold ordering, which takes the input bed file and original scaffold FASTA file.
 ```
-python -m jcvi.assembly.allmaps path JM-2 scaffolds.fasta
+python -m jcvi.assembly.allmaps path JM-2.bed scaffolds.fasta
 ```
 
-#### Step 5. Build release
-```
-python -m jcvi.assembly.allmaps build JM-2 scaffolds.fasta
-```
-
+## Results explained
+#### Genome release
 We now have a release!
 * `JM-2.fasta` - reconstructed chromosome sequences
 * `JM-2.agp` - order and orientations of the scaffolds, which can be used in Genbank submissions
 * `JM-2.chain` - useful to convert scaffold coordinates to new coordinates, for example, if you annotated gene models using the scaffolds, you can use this file along with `liftOver` to transfer the genes onto chromosomes
 
-
-## Advanced topics
-#### Plot alignments
-```
-python -m jcvi.assembly.allmaps plotall JM-2
-```
+#### Visualize alignments
+Each generated PDF file like `chr23.pdf` corresponds to a reconstructed chromosome. The left panel contains "side-by-side" alignments between chromosomes and the linkage groups. This type of plot is helpful to reveal conflicting markers as crossing lines. The second visualization on the right is scatter plot, where the coordinates of the dots represent the physical locations and the map locations of the markers. The scatter plots are a good visualization for illustrating the monotonic trend as well as revealing breaks in colinearity.
 ![chr23 alignments](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/chr23.png)
 
 #### Summary statistics
-```
-python -m jcvi.assembly.allmaps summary JM-2 scaffolds.fasta
-```
-This command will create following tables, summarizing various stats before and after the scaffold anchoring.
+A summary report `JM-2.summary.txt` is provided to the user during the genome build, with important statistics such as the number of scaffolds anchored, the number of big (N50) scaffolds anchored, total number of markers included in the final assembly and total length of sequences. These statistics can be useful tools to compare the efficacy of ALLMAPS before and after anchoring.
 ```
 *** Summary for each individual map ***
 ======================================================================
@@ -129,7 +119,7 @@ The anchor rate for the consensus map reaches 100%, which is better than using a
 #### Estimate gap lengths
 ALLMAPS can estimate sizes for inter-scaffold gaps, through the conversion from genetic distance (for example, centi-Morgan used in genetic maps) to physical distance. The default inter-scaffold gap size is 100, which according to Genbank convention, indicates a gap with unknown size. The following command will re-estimate gap sizes based on distance conversion, and generate a new AGP file `JM-2.estimategaps.agp`.
 ```
-python -m jcvi.assembly.allmaps estimategaps JM-2
+python -m jcvi.assembly.allmaps estimategaps JM-2.bed
 ```
 
 For more details, please check out [ALLMAPS: How to estimate gap sizes](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-estimate-gap-sizes)
