@@ -28,7 +28,8 @@ If you are somehow stuck, you might need to install the libraries manually, plea
 
 Use the following script to download Linux binaries. You need to copy the binaries to a directory that's on your `PATH` (for example ~/bin).
 ```
-wget https://www.dropbox.com/s/onsjieazu0uytgk/ALLMAPS-install.sh && sh ALLMAPS-install.sh
+wget https://www.dropbox.com/s/onsjieazu0uytgk/ALLMAPS-install.sh
+sh ALLMAPS-install.sh
 cp concorde faSize liftOver ~/bin/
 ```
 
