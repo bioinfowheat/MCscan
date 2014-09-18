@@ -1,3 +1,5 @@
+Please use the following if the quick installation method does not work for you.
+
 ###1. Install Biopython
 ```
 $ wget http://biopython.org/DIST/biopython-1.63.tar.gz
@@ -46,31 +48,31 @@ $ python setup.py install --user
 ####6.1 From github
 ```
 $ git clone git://github.com/tanghaibao/jcvi-bin.git
-$ cp jcvi-bin/bin/* /usr/local/bin                  ### /usr/local/bin is your own PATH
+$ cp jcvi-bin/bin/* /usr/local/bin                  # /usr/local/bin is your own PATH
 ```
 ####6.2 Recompile
+If github does not work for you, please get concorde, faSize/liftOver and recompile manually.
 ````
-###If github is not work for you, please get concorde, faSize/liftOver and recompile manually.
-a) recompile concorde 
+# recompile concorde 
 $ wget http://www.math.uwaterloo.ca/tsp/concorde/downloads/codes/linux24/concorde.gz
 $ gunzip concorde.gz
 $ chmod u+x concorde
 $ cp concorde /TO/YOUR/PATH
 
-b) recompile faSize/liftOver
+# recompile faSize/liftOver
 $ wget http://hgdownload.cse.ucsc.edu/admin/jksrc.zip
 $ unzip jksrc.zip
 $ cd kent
-$ uname -m                          ### check your MACHTYPE
-$ MACHTYPE=i686                     ### for example, your MACHTYPE is i686
+$ uname -m                          # check your MACHTYPE
+$ MACHTYPE=i686                     # for example, your MACHTYPE is i686
 $ export MACHTYPE                   
-$ mkdir ~/bin/$MACHTYPE             ### kent apps will go to this directory. if you don't have it, make one
-$ mkdir src/lib/$MACHTYPE           ### if you don't have it, make another one in src/lib
+$ mkdir ~/bin/$MACHTYPE             # kent apps will go to this directory. if you don't have it, make one
+$ mkdir src/lib/$MACHTYPE           # if you don't have it, make another one in src/lib
 $ cd src                            
 $ make                              
-$ ls -all ~/bin/i686                ### check do you have faSize and liftOver
-$ export PATH=~/bin/i686/:$PATH     ### make sure that ~/bin/i686 is on your path
-$ export PATH=~/bin                 ### make sure that ~/bin is on your path as well
+$ ls -all ~/bin/i686                # check do you have faSize and liftOver
+$ export PATH=~/bin/i686/:$PATH     # make sure that ~/bin/i686 is on your path
+$ export PATH=~/bin                 # make sure that ~/bin is on your path as well
 ```
 
 ###7. Install ALLMAPS 
@@ -78,7 +80,7 @@ $ export PATH=~/bin                 ### make sure that ~/bin is on your path as 
 $ mkdir code
 $ cd code
 $ git clone git://github.com/tanghaibao/jcvi.git     
-$ export PYTHONPATH=/home/username/code:$PYTHONPATH  ### make sure the directory is on your PYTHONPATH
+$ export PYTHONPATH=/home/username/code:$PYTHONPATH  # make sure the directory is on your PYTHONPATH
 ```
 
 ###8. Test sample data
