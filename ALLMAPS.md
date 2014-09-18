@@ -15,24 +15,24 @@ The ordering and orientation of genomic scaffolds to reconstruct chromosomes is 
 * [Matplotlib](http://matplotlib.org)
 * [jcvi](https://github.com/tanghaibao/jcvi)
 
-Most of these Python libraries can be installed using `easy_install` or `pip install`, for example:
+You should be able to install all Python dependencies with the following command (and wait for the installation to complete).
 ```
-easy_install biopython numpy deap networkx matplotlib jcvi
+easy_install jcvi
 ```
 If you are somehow stuck, you might need to install the libraries manually, please check out [our installation guide in heavy details](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-install).
 
 ### External dependencies
-* concorde
-* faSize
-* liftOver
+* [concorde](http://www.math.uwaterloo.ca/tsp/concorde.html)
+* [faSize](http://hgdownload.cse.ucsc.edu/admin/exe/)
+* [liftOver](http://hgdownload.cse.ucsc.edu/admin/exe/)
 
-These external dependencies are available in my repo [jcvi-bin](https://github.com/tanghaibao/jcvi-bin). You need to copy the binaries to a directory that's on you `PATH`.
+Use the following script to download Linux binaries. You need to copy the binaries to a directory that's on your `PATH` (for example ~/bin).
 ```
-$ git clone git://github.com/tanghaibao/jcvi-bin.git
-$ cp jcvi-bin/bin/* /usr/local/bin
+wget https://www.dropbox.com/s/onsjieazu0uytgk/ALLMAPS-install.sh && sh ALLMAPS-install.sh
+cp concorde faSize liftOver ~/bin/
 ```
 
-If they fail to execute, please get concorde from [here] (http://www.math.uwaterloo.ca/tsp/concorde.html), faSize/liftOver from [here](http://hgdownload.cse.ucsc.edu/admin/jksrc.zip) and recompile if necessary. If you are somehow stuck, please check out [our installation guide in heavy details](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-install).
+If you are somehow stuck, please check out [our installation guide in heavy details](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-install).
 
 ## Walk-through example
 We would like to use a small example to showcase what you can do with ALLMAPS. In this example, we have two maps, and scaffold sequences. Our goal is to use the two maps, to order and orient the genomic scaffolds into chromosomes. Download the test dataset [here](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/ALLMAPS-testdata.zip). We have the following files:
