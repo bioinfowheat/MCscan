@@ -126,7 +126,12 @@ python -m jcvi.assembly.allmaps estimategaps JM-2.bed
 For more details, please check out [ALLMAPS: How to estimate gap sizes](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-estimate-gap-sizes)
 
 #### Use different types of genomic maps in ALLMAPS
-The above example assumes genetic maps as input data. For conversion from other types of input data, please check out [How to use different types of genomic maps](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-use-different-types-of-genomic-maps).
+The above example assumes genetic maps as input data. ALLMAPS support other types of maps in BED format, and multiple BED files can be merged into a single input file, using `mergebed`.
+```
+python -m jcvi.assembly.allmaps mergebed opticalmap.bed geneticmap.bed synteny.bed -o merged.bed
+```
+
+For detailed examples of conversion from other maps, please check out [How to use different types of genomic maps](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-use-different-types-of-genomic-maps).
 
 ## Real-world examples
 Two studies `medicago` and `yellow-catfish`, described in details in the ALLMAPS manuscript, can be run to get further familiarized with ALLMAPS. See `run.sh` in respective folder on running ALLMAPS on these two data sets. 
