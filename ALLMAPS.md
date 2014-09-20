@@ -123,7 +123,7 @@ ALLMAPS can estimate sizes for inter-scaffold gaps, through the conversion from 
 python -m jcvi.assembly.allmaps estimategaps JM-2.bed
 ```
 
-For more details, please check out [ALLMAPS: How to estimate gap sizes](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-estimate-gap-sizes)
+For more details, please check out [ALLMAPS: How to estimate gap sizes](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-estimate-gap-sizes).
 
 #### Use different types of genomic maps in ALLMAPS
 The above example assumes genetic maps as input data. ALLMAPS support other types of maps in BED format, and multiple BED files can be merged into a single input file, using `mergebed`.
