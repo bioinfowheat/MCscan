@@ -48,30 +48,22 @@ $ python setup.py install --user
 ####6.1 From github
 ```
 $ git clone git://github.com/tanghaibao/jcvi-bin.git
-$ cp jcvi-bin/bin/* /usr/local/bin                  # /usr/local/bin is your own PATH
+$ cp jcvi-bin/bin/* ~/bin            # ~/bin is your own PATH
 ```
 ####6.2 Recompile
-If github does not work for you, please get concorde, faSize/liftOver and recompile manually.
+If you cannot execute the binaries, recompile manually.
 ````
 # recompile concorde 
-$ wget http://www.math.uwaterloo.ca/tsp/concorde/downloads/codes/linux24/concorde.gz
-$ gunzip concorde.gz
-$ chmod u+x concorde
-$ cp concorde /TO/YOUR/PATH
-
-# recompile faSize/liftOver
 $ wget http://hgdownload.cse.ucsc.edu/admin/jksrc.zip
 $ unzip jksrc.zip
 $ cd kent
 $ uname -m                          # check your MACHTYPE
-$ MACHTYPE=i686                     # for example, your MACHTYPE is i686
-$ export MACHTYPE                   
-$ mkdir ~/bin/$MACHTYPE             # kent apps will go to this directory. if you don't have it, make one
-$ mkdir src/lib/$MACHTYPE           # if you don't have it, make another one in src/lib
+$ export MACHTYPE=i686              # for example, your MACHTYPE is i686    
+$ mkdir ~/bin/$MACHTYPE             # Kent apps will go to this directory
 $ cd src                            
 $ make                              
-$ ls -all ~/bin/i686                # check do you have faSize and liftOver
-$ export PATH=~/bin/i686/:$PATH     # make sure that ~/bin/i686 is on your path
+$ ls -all ~/bin/$MACHTYPE           # check do you have faSize and liftOver
+$ export PATH=~/bin/$MACHTYPE:$PATH # make sure that ~/bin/i686 is on your path
 $ export PATH=~/bin                 # make sure that ~/bin is on your path as well
 ```
 
@@ -85,7 +77,7 @@ $ export PYTHONPATH=/home/username/code:$PYTHONPATH  # make sure the directory i
 
 ###8. Test sample data
 ```
-$ wget https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS-testdata/ALLMAPS-testdata.zip
+$ wget https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/ALLMAPS-testdata.zip
 $ unzip ALLMAPS-testdata.zip
 $ cd ALLMAPS-testdata
 $ sh run.sh
