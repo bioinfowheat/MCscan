@@ -15,9 +15,15 @@ The ordering and orientation of genomic scaffolds to reconstruct chromosomes is 
 * [Matplotlib](http://matplotlib.org)
 * [jcvi](https://github.com/tanghaibao/jcvi)
 
-You should be able to install all Python dependencies with the following command (and wait for the installation to complete).
+Most of these Python libraries can be installed using `easy_install` or `pip install`, for example:
 ```
-easy_install jcvi
+easy_install biopython numpy deap networkx matplotlib jcvi
+```
+*Optional*: If you experience problem installing the jcvi library, you can clone the [jcvi](https://github.com/tanghaibao/jcvi/) repository directly and put the directory on your `PYTHONPATH`. For example, if you want to install it to `~/code`, do the following:
+```
+$ cd ~/code
+$ git clone git://github.com/tanghaibao/jcvi.git
+$ export PYTHONPATH=~/code:$PYTHONPATH
 ```
 If you are somehow stuck, you might need to install the libraries manually, please check out [our installation guide in heavy details](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-install).
 
