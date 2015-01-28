@@ -6,8 +6,8 @@ The ordering and orientation of genomic scaffolds to reconstruct chromosomes is 
 * Can incorporate [many mapping evidence](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-use-different-types-of-genomic-maps), requiring minimal transformation - **powerful**
 * Streamline the genome build (with FASTA and AGP outputs) and genome update (with CHAIN output) - **easy-to-use**
 
-## Citation
-Tang H, Zhang X, Miao C, Zhang J, Ming R, Schnable J, Schnable P, Lyons E, Lu J. (2015) ALLMAPS: robust scaffold ordering based on multiple maps. Genome Biol. 16(1):3 [Link](http://genomebiology.com/2015/16/1/3)
+### Citation
+Tang H, Zhang X, Miao C, Zhang J, Ming R, Schnable J, Schnable P, Lyons E, Lu J. (2015) ALLMAPS: robust scaffold ordering based on multiple maps. [*Genome Biology*](http://genomebiology.com/2015/16/1/3) 16(1):3
 
 ## Installation
 ### Python dependencies
