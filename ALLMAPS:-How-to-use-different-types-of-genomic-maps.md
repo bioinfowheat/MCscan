@@ -8,7 +8,7 @@ We note that a generalized form of genomic maps is constituted by markers repres
 ## Walk-through example
 Different maps have their idiosyncratic formats. For ALLMAPS to process these maps, they have to be converted to  `.bed` format. The conversion can be achieved by your own script, or using our converters. We give a few examples below, but please understand that we cannot accommodate every possible format out there.
 
-We have included using Medicago data as example, [click here to download](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS-testdata/maps.zip).
+We have included using Medicago data as example, [click here to download](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/maps.zip).
 
 ### Optical map
 A popular format for optical mapping is the MapSolver XML format, which looks like (e.g. `omdata/1.xml`):
