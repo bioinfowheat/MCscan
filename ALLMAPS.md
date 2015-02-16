@@ -109,19 +109,19 @@ Scaffolds with >=4 markers                     7                     6
                Total bases    14,691,276 (96.2%)    13,781,640 (90.2%)
 ----------------------------------------------------------------------
 *** Summary for consensus map ***
-=============================================================
-                         o               Anchored    Unplaced
--------------------------------------------------------------
-          Markers (unique)                    120           0
-            Markers per Mb                    7.9           0
-             N50 Scaffolds                      5           0
-                 Scaffolds                     22           0
-   Scaffolds with 1 marker                      5           0
-  Scaffolds with 2 markers                      7           0
-  Scaffolds with 3 markers                      1           0
-Scaffolds with >=4 markers                      9           0
-               Total bases    15,270,543 (100.0%)    0 (0.0%)
--------------------------------------------------------------
+===================================================================================
+                         o               Anchored              Oriented    Unplaced
+-----------------------------------------------------------------------------------
+          Markers (unique)                    120                   107           0
+            Markers per Mb                    7.9                   8.8           0
+             N50 Scaffolds                      5                     5           0
+                 Scaffolds                     22                    13           0
+   Scaffolds with 1 marker                      5                     0           0
+  Scaffolds with 2 markers                      7                     3           0
+  Scaffolds with 3 markers                      1                     1           0
+Scaffolds with >=4 markers                      9                     9           0
+               Total bases    15,270,543 (100.0%)    12,156,526 (79.6%)    0 (0.0%)
+-----------------------------------------------------------------------------------
 ```
 The anchor rate for the consensus map reaches 100%, which is better than using any single map alone. Hooray!
 
