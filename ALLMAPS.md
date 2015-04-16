@@ -73,6 +73,7 @@ python -m jcvi.assembly.allmaps merge JMMale.csv JMFemale.csv -o JM-2.bed
 JMFemale 1
 JMMale 1
 ```
+The first map (first line) in the weights file is important since other maps will be partitioned according to this map. Please pick the map that matches the expected number of chromosomes.
 
 #### Step 4. Run scaffold ordering, which takes the input bed file and original scaffold FASTA file.
 ```
