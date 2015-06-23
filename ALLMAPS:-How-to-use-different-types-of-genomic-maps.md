@@ -89,7 +89,9 @@ Ca_02937        Medtr2g105410   1416
 Ca_02936        Medtr2g105390   1236
 Ca_02935        Medtr2g105360   1414
 ```
-And gene positions for Medicago (`medicago.bed`) and chickpea (`chickpea.bed`):
+The third column (BLAST score) is NOT really used in ALLMAPS, so you can just put a fake score there (like 100). You can also parse the BLAST results to retrieve this. However, you should consider enriching the syntenic anchors for best results, for example, only using reciprocal best BLAST hit. 
+
+Gene positions for Medicago (`medicago.bed`) and chickpea (`chickpea.bed`):
 ```
 Scaffold0001    322     902     Medtr1g057550   1000    -
 Scaffold0001    8954    15489   Medtr1g057560   1000    -
