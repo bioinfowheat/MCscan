@@ -6,6 +6,11 @@ The ordering and orientation of genomic scaffolds to reconstruct chromosomes is 
 * Can incorporate [many mapping evidence](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-use-different-types-of-genomic-maps), requiring minimal transformation - **powerful**
 * Streamline the genome build (with FASTA and AGP outputs) and genome update (with CHAIN output) - **easy-to-use**
 
+### Algorithm
+Solving scaffold order and orientation (OO) in general is NP-hard. ALLMAPS converts the problem into Traveling Salesman Problem (TSP) and refine the scaffold OO using Genetic Algorithm. To have a rough idea, the progression of the scaffold OO using yellow catfish chromosome 1 can be viewed in the following animation. Please see more details in the paper.
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=-eb4nKyyQM0?vq=hd1080" target="_blank"><img src="http://img.youtube.com/vi/-eb4nKyyQM0/0.jpg" alt="ALLMAPS animation" width="400" height="300" border="10" /></a>
+
 ### Citation
 Tang H, Zhang X, Miao C, Zhang J, Ming R, Schnable J, Schnable P, Lyons E, Lu J. (2015) ALLMAPS: robust scaffold ordering based on multiple maps. [*Genome Biology*](http://genomebiology.com/2015/16/1/3) 16(1):3
 
