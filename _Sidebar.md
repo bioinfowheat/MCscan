@@ -6,5 +6,6 @@
 * [[GRABSEEDS]]
   * [[GRABSEEDS: How to install]]
   * [[GRABSEEDS: How to tune accuracy]]
+* [[MCscan-(Python-version)]]
 * [[Gallery]]
 
