@@ -89,4 +89,45 @@ If you look closely, one of the 3 regions are often stronger, which corresponds 
 
 ![Grape-peach-synteny-.99](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape.peach.cscore.99.png)
 
+## Macrosynteny visualization
+Now let's move to a different kind of visualization using the same synteny output ``grape.peach.anchors``. Aside from the BED files and synteny files we already have, we need to prepare two additional files. 
 
+First is the ``seqids`` file, which tells the plotter which set of chromosomes to include. Here, we've removed unplaced and small scaffolds. First line contains 19 grape chromosomes and second line contains 8 peach chromosomes.
+
+    chr1,chr2,chr3,chr4,chr5,chr6,chr7,chr8,chr9,chr10,chr11,chr12,chr13,chr14,chr15,chr16,chr17,chr18,chr19
+    scaffold_1,scaffold_2,scaffold_3,scaffold_4,scaffold_5,scaffold_6,scaffold_7,scaffold_8
+
+Second is the ``layout`` file, which tells the plotter where to draw what. The whole canvas is 0-1 on x-axis and 0-1 on y-axis. First three columns specify the position of the track. Then rotation, color, label, vertical alignment (va), and then the genome BED file. Track 0 is now grape, track 1 is now peach. The next stanza specify what edges to draw between the tracks. ``e, 0, 1`` asks to draw edges between track 0 and 1, using information from the ``.simple`` file. 
+
+    # y, xstart, xend, rotation, color, label, va,  bed
+     .6,     .1,    .8,       0,      , Grape, top, grape.bed
+     .4,     .1,    .8,       0,      , Peach, top, peach.bed
+    # edges
+    e, 0, 1, grape.peach.anchors.simple
+
+Finally this command generates a ``.simple`` file which is a more succinct form than ``.anchors`` file.
+
+    $ python -m jcvi.compara.synteny screen --minspan=30 --simple grape.peach.anchors grape.peach.anchors.new 
+
+With all input files ready, let's plot.
+
+    $ python -m jcvi.graphics.karyotype seqids layout
+
+This generates our karyotype figure.
+
+![Grape-peach-karyotype](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape.peach.karyotype.png)
+
+Further customization is possible. For example, change the order of chromosomes in ``seqids`` could lead to a visually more appealing figure. Also, play with the positions, color, labels etc in the ``layout`` file.
+
+What if we want to highlight a specific block? We should go into the ``.simple`` file, locate the relevant block. Please note that each line in the ``.simple`` file is a synteny blocks, with start and stop grape gene, then start and stop peach gene, final two columns are score and orientation.
+
+    $ vi grape.peach.anchors.simple 
+    g*GSVIVT01012028001 GSVIVT01000604001   ppa011886m  ppa008534m  392 +
+    GSVIVT01010441001   GSVIVT01000970001   ppa022891m  ppa001358m  115 -
+    GSVIVT01000555001   GSVIVT01003228001   ppa002809m  ppa010569m  359 +
+    ...
+    (save the file)
+    $ python -m jcvi.graphics.karyotype seqids layout
+
+We have then highlighted (with color 'g' green) a particular synteny block in the figure.
+![Grape-peach-karyotype-green](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape.peach.karyotype-green.png)
