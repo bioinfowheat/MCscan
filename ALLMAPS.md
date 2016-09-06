@@ -132,6 +132,9 @@ Scaffolds with >=4 markers                      9                     9         
 The anchor rate for the consensus map reaches 100%, which is better than using any single map alone. Hooray!
 
 ## Advanced topics
+#### Split chimeric contigs
+ALLMAPS provide some way to splitting chimeric contigs, although most users would prefer to split with their own custom scripts. For more details, please check out [ALLMAPS: How to split chimeric contigs](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-split-chimeric-contigs).
+
 #### Estimate gap lengths
 ALLMAPS can estimate sizes for inter-scaffold gaps, through the conversion from genetic distance (for example, centi-Morgan used in genetic maps) to physical distance. The default inter-scaffold gap size is 100, which according to Genbank convention, indicates a gap with unknown size. The following command will re-estimate gap sizes based on distance conversion, and generate a new AGP file `JM-2.estimategaps.agp`.
 ```
