@@ -3,6 +3,7 @@
   * [[ALLMAPS: How to install]]
   * [[ALLMAPS: How to use different types of genomic maps]]
   * [[ALLMAPS: How to estimate gap sizes]]
+  * [[ALLMAPS: How to split chimeric contigs]]
 * [[GRABSEEDS]]
   * [[GRABSEEDS: How to install]]
   * [[GRABSEEDS: How to tune accuracy]]
