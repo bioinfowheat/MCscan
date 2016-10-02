@@ -13,11 +13,12 @@ GRABSEEDS make heavy use of image manipulation and text recognition libraries an
 * [scikit-image](http://scikit-image.org/)
 * [pypdf2](http://mstamy2.github.io/PyPDF2/)
 * [wand](http://docs.wand-py.org/en/0.3.7/)
+* [Pillow](https://python-pillow.org/)
 * [jcvi](https://github.com/tanghaibao/jcvi/)
 
 Most of these Python libraries can be installed using `easy_install` or `pip install`, for example:
 ```
-easy_install scipy matplotlib scikit-image pypdf2 wand jcvi
+easy_install scipy matplotlib scikit-image pypdf2 wand Pillow jcvi
 ```
 *Optional*: If you experience problem installing the jcvi library, you can clone the [jcvi](https://github.com/tanghaibao/jcvi/) repository directly and put the directory on your `PYTHONPATH`. For example, if you want to install it to `~/code`, do the following:
 ```
