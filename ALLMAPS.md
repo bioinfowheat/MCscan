@@ -151,6 +151,9 @@ python -m jcvi.assembly.allmaps mergebed opticalmap.bed geneticmap.bed synteny.b
 
 For detailed examples of conversion from other maps, please check out [How to use different types of genomic maps](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-use-different-types-of-genomic-maps).
 
+#### Number of reconstructed chromosomes
+The **pivot map** is the map with the heaviest weight or whichever comes first in the event of a tie, based on `weights.txt`. The **pivot** map determines the number of partitions which lead to chromosomes. Make sure you set the weights so that the most confident map as the pivot (either assigned it a larger weight, or make it the first line of the `weights.txt` in the case of equal weights).
+
 ## Real-world examples
 Two studies `medicago` and `yellow-catfish`, described in details in the ALLMAPS manuscript, can be run to get further familiarized with ALLMAPS. See `run.sh` in respective folder on running ALLMAPS on these two data sets. 
 * Tang, Haibao (2014): ALLMAPS supporting data: Yellow catfish genome assembly. figshare. 
