@@ -144,7 +144,7 @@ Say we are interested in looking at peach and cacao comparisons.
     $ python -m jcvi.compara.catalog ortholog peach cacao --cscore=.99
     $ python -m jcvi.compara.synteny screen --minspan=30 --simple peach.cacao.anchors peach.cacao.anchors.new
 
-Now that we have `cacao.bed` and `peach.cacao.anchors.simple`, we'll need to add them to the `layout`. Please note the two new lines - line 4 and 7. Line 7 says let's connect track 0 (grape) with 1 (peach), track 1 (peach) with 2 (cacao).
+Now that we have `cacao.bed` and `peach.cacao.anchors.simple`, we'll need to add them to the `layout`. Please note the two new lines - line 4 and 7. Section `# edges` says that we should connect track 0 (grape) with 1 (peach), track 1 (peach) with 2 (cacao).
 
     # y, xstart, xend, rotation, color, label, va,  bed
      .7,     .1,    .8,      15,      , Grape, top, grape.bed
