@@ -131,3 +131,38 @@ What if we want to highlight a specific block? We should go into the ``.simple``
 
 We have then highlighted (with color 'g' green) a particular synteny block in the figure.
 ![Grape-peach-karyotype-green](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape.peach.karyotype-green.png)
+
+## Getting fancy
+We can be really creative about karyotype plots! For a start, we can add as many genomes as we want. Let's add cacao. We just need to repeat the downloading and formatting on the cacao genome (extract `cacao.cds` and `cacao.bed`).
+
+    $ python -m jcvi.apps.fetch phytozome Tcacao
+    $ python -m jcvi.formats.fasta format --sep="|" Tcacao_233_cds.fa.gz cacao.cds
+    $ python -m jcvi.formats.gff bed --type=mRNA --key=Name Tcacao_233_gene.gff3.gz -o cacao.bed
+
+Say we are interested in looking at peach and cacao comparisons. 
+
+    $ python -m jcvi.compara.catalog ortholog peach cacao --cscore=.99
+    $ python -m jcvi.compara.synteny screen --minspan=30 --simple peach.cacao.anchors peach.cacao.anchors.new
+
+Now that we have `cacao.bed` and `peach.cacao.anchors.simple`, we'll need to add them to the `layout`. Please note the two new lines - line 4 and 7. Line 7 says let's connect track 0 (grape) with 1 (peach), track 1 (peach) with 2 (cacao).
+
+    # y, xstart, xend, rotation, color, label, va,  bed
+     .7,     .1,    .8,      15,      , Grape, top, grape.bed
+     .5,     .1,    .8,       0,      , Peach, top, peach.bed
+     .3,     .1,    .8,     -15,      , Cacao, bottom, cacao.bed
+    # edges
+    e, 0, 1, grape.peach.anchors.simple
+    e, 1, 2, peach.cacao.anchors.simple
+
+Remember to add the major cacao chromosomes (line 3) in `seqids`. Remember the order of the genomes in `seqids` need to match the order in `layout`.
+
+    chr1,chr2,chr3,chr4,chr5,chr6,chr7,chr8,chr9,chr10,chr11,chr12,chr13,chr14,chr15,chr16,chr17,chr18,chr19
+    scaffold_1,scaffold_2,scaffold_3,scaffold_4,scaffold_5,scaffold_6,scaffold_7,scaffold_8
+    scaffold_1,scaffold_2,scaffold_3,scaffold_4,scaffold_5,scaffold_6,scaffold_7,scaffold_8,scaffold_9,scaffold_10r
+
+We can also customize the rotation (in degrees), so we are no longer limited to the boring horizontal arrangement of chromosomes. After the command:
+
+    $ python -m jcvi.graphics.karyotype seqids layout
+
+We have the final product!
+![Grape-peach-cacao-fancy](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape-peach-cacao.png)
