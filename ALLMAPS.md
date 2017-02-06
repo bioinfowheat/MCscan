@@ -90,7 +90,7 @@ python -m jcvi.assembly.allmaps path JM-2.bed scaffolds.fasta
 We now have a release!
 * `JM-2.fasta` - reconstructed chromosome sequences
 * `JM-2.agp` - order and orientations of the scaffolds, which can be used in Genbank submissions
-* `JM-2.chain` - useful to convert scaffold coordinates to new coordinates, for example, if you annotated gene models using the scaffolds, you can use this file along with `liftOver` to transfer the genes onto chromosomes
+* `JM-2.chain` - useful to convert scaffold coordinates to new coordinates, for example, if you annotated gene models using the scaffolds, you can use this file along with `liftOver` to transfer the genes onto chromosomes. See [ALLMAPS: How to lift over gene annotations](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-lift-over-gene-annotations).
 
 #### Visualize alignments
 Each generated PDF file like `chr23.pdf` corresponds to a reconstructed chromosome. The left panel contains "side-by-side" alignments between chromosomes and the linkage groups. This type of plot is helpful to reveal conflicting markers as crossing lines. The second visualization on the right is scatter plot, where the coordinates of the dots represent the physical locations and the map locations of the markers. The scatter plots are a good visualization for illustrating the monotonic trend as well as revealing breaks in colinearity.
