@@ -2,6 +2,7 @@
 * [[ALLMAPS]]
   * [[ALLMAPS: How to install]]
   * [[ALLMAPS: How to use different types of genomic maps]]
+  * [[ALLMAPS: How to lift over gene annotations]]
   * [[ALLMAPS: How to estimate gap sizes]]
   * [[ALLMAPS: How to split chimeric contigs]]
 * [[GRABSEEDS]]
