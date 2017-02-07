@@ -8,7 +8,7 @@ ALLMAPS anchors genomic scaffolds onto linkage groups to reconstruct chromosomal
 #### [GRABSEEDS](wiki/GRABSEEDS)
 GRABSEEDS facilitates computerized extraction of object features and text labels from digital images in large phenotyping experiments.
 
-#### [MCscan-(Python-version)](wiki/MCscan-(Python-version))
+#### [MCscan (Python version)](wiki/MCscan-(Python-version))
 MCscan facilitates pairwise and multiple genome syntenic comparisons and visualizations. 
 
 ## Gallery
