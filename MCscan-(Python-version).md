@@ -89,6 +89,12 @@ If you look closely, one of the 3 regions are often stronger, which corresponds 
 
 ![Grape-peach-synteny-.99](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape.peach.cscore.99.png)
 
+We could also quick test if the synteny pattern is indeed **1:1**, by running:
+
+    $ python -m jcvi.compara.synteny depth --histogram grape.peach.anchors
+
+![Grape-peach-depth](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape.peach.depth.png)
+
 ## Macrosynteny visualization
 Now let's move to a different kind of visualization using the same synteny output ``grape.peach.anchors``. Aside from the BED files and synteny files we already have, we need to prepare two additional files. 
 
