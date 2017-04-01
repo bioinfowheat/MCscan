@@ -9,7 +9,7 @@ The ordering and orientation of genomic scaffolds to reconstruct chromosomes is 
 ### Algorithm demo
 Solving scaffold ordering and orientation (OO) in general is NP-hard. ALLMAPS converts the problem into Traveling Salesman Problem (TSP) and refines scaffold OO using Genetic Algorithm. For rough idea, a 'live' demo of the scaffold OO on yellow catfish chromosome 1 can be viewed in the animation below. 
 
-<a href="https://youtu.be/BUMMhApPCkw?vq=hd1080" target="_blank"><img src="https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/ALLMAPS.gif" alt="ALLMAPS animation" width="800" height="480" border="0" /></a>
+<a href="https://youtu.be/BUMMhApPCkw?vq=hd1080" target="_blank"><img src="https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/ALLMAPS.gif" alt="ALLMAPS animation" width="600" height="360" border="0" /></a>
 
 ### Citation
 Tang H, Zhang X, Miao C, Zhang J, Ming R, Schnable J, Schnable P, Lyons E, Lu J. (2015) ALLMAPS: robust scaffold ordering based on multiple maps. [*Genome Biology*](http://genomebiology.com/2015/16/1/3) 16(1):3
