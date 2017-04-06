@@ -3,7 +3,7 @@
 * [Workflow](#workflow)
    - [Download data](#download-data)
    - [Pairwise synteny search](#pairwise-synteny-search)
-   - [Visualize pairwise synteny](#visualize-pairwise-synteny)
+   - [Pairwise synteny visualization](#pairwise-synteny-visualization)
    - [Macrosynteny visualization](#macrosynteny-visualization)
    - [Macrosynteny getting fancy](#macrosynteny-getting-fancy)
    - [Microsynteny visualization](#macrosynteny-visualization)
@@ -81,7 +81,7 @@ That's it! This calls LAST to do the comparison, filter the LAST output to remov
 
 The ``.last`` file is raw LAST output, ``.last.filtered`` is filtered LAST output, ``.anchors`` is the seed synteny blocks (high quality), ``.lifted.anchors`` recruits additional anchors to form the final synteny blocks.
 
-## Visualize pairwise synteny
+## Pairwise synteny visualization
 The best visualization to see pairwise synteny is using dotplot. This is just one command.
 
     $ python -m jcvi.graphics.dotplot grape.peach.anchors
