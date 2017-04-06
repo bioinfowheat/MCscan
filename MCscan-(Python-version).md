@@ -172,3 +172,31 @@ We can also customize the rotation (in degrees), so we are no longer limited to 
 
 We have the final product!
 ![Grape-peach-cacao-fancy](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape-peach-cacao.png)
+
+## Microsynteny visualization
+What if we want to look at **local** synteny? Local synteny mostly focuses on gene-level, showing matching regions along with aligned gene models. For this, we'll need to compute the layout for the gene-level matchings:
+
+    $ python -m jcvi.compara.synteny mcscan grape.bed grape.peach.lifted.anchors --iter=1 -o grape.peach.i1.blocks
+
+Note that the option ``--iter=1`` says we are extracting *one* best region matching each grape region. If you take a look at the resulting ``grape.peach.i1.blocks`` file, it contains grape as the first column, and peach as the second column. If the option ``--iter`` is set to 2, there will be 2 peach regions, and so on. Specifically, this will be useful to plot regions resulted from genome duplications. 
+
+OK. The file ``grape.peach.i1.blocks`` contains lots of local regions! We can choose any arbitrary region to visualize.
+
+    $ head -50 grape.peach.i1.blocks > blocks
+
+Finally, we'll need a layout file just like in the macro-synteny plots. The ``blocks.layout`` file has:
+
+    # x,   y, rotation,   ha,     va,   color, ratio,            label
+    0.5, 0.6,        0, left, center,       m,     1,       grape Chr1
+    0.5, 0.4,        0, left, center, #fc8d62,     1, peach scaffold_1
+    # edges
+    e, 0, 1
+
+With command below, we can generate a local synteny plot:
+
+    $ python -m jcvi.graphics.synteny blocks grape_peach.bed blocks.layout
+
+The resulting plot looks like below.
+![Grape-peach-blocks](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape.peach.blocks.png)
+
+It is also possible to do more than two matching regions! Similar to the macro-synteny plots, first construct multi-synteny blocks using ``python -m jcvi.compara.synteny mcscan``, then modify the ``blocks.layout`` file to indicate more regions as well as edges between the regions.
