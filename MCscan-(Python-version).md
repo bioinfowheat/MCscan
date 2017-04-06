@@ -194,6 +194,7 @@ Finally, we'll need a layout file just like in the macro-synteny plots. The ``bl
 
 With command below, we can generate a local synteny plot:
 
+    $ cat grape.bed peach.bed > grape_peach.bed
     $ python -m jcvi.graphics.synteny blocks grape_peach.bed blocks.layout
 
 The resulting plot looks like below.
