@@ -1,3 +1,14 @@
+# Table of contents
+* [Dependencies](#dependencies)
+* [Workflow](#workflow)
+   - [Download data](#download-data)
+   - [Pairwise synteny search](#pairwise-synteny-search)
+   - [Visualize pairwise synteny](#visualize-pairwise-synteny)
+   - [Macrosynteny visualization](#macrosynteny-visualization)
+   - [Macrosynteny getting fancy](#macrosynteny-getting-fancy)
+   - [Microsynteny visualization](#macrosynteny-visualization)
+   - [Microsynteny getting fancy](#microsynteny-getting-fancy)
+
 # Dependencies
 Two external command line tools are needed:
 * [LASTAL](http://last.cbrc.jp). Compile and then move ``lastal`` and ``lastdb`` on your ``PATH``.
