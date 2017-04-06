@@ -138,7 +138,7 @@ What if we want to highlight a specific block? We should go into the ``.simple``
 We have then highlighted (with color 'g' green) a particular synteny block in the figure.
 ![Grape-peach-karyotype-green](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape.peach.karyotype-green.png)
 
-## Getting fancy
+## Macrosynteny getting fancy
 We can be really creative about karyotype plots! For a start, we can add as many genomes as we want. Let's add cacao. We just need to repeat the downloading and formatting on the cacao genome (extract `cacao.cds` and `cacao.bed`).
 
     $ python -m jcvi.apps.fetch phytozome Tcacao
@@ -200,4 +200,42 @@ With command below, we can generate a local synteny plot:
 The resulting plot looks like below.
 ![Grape-peach-blocks](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape.peach.blocks.png)
 
+## Microsynteny getting fancy
 It is also possible to do more than two matching regions! Similar to the macro-synteny plots, first construct multi-synteny blocks using ``python -m jcvi.compara.synteny mcscan``, then modify the ``blocks.layout`` file to indicate more regions as well as edges between the regions.
+
+Let's continue with our example with grape, peach and cacao. Now let's say we want to build a ``blocks`` file with three genomes. It would be nice to have a single 'reference', let's pick grape for example, and align peach and cacao separately to grape. We already did peach, now similarly on cacao.
+
+    $ python -m jcvi.compara.catalog ortholog grape cacao --cscore=.99
+    $ python -m jcvi.compara.synteny mcscan grape.bed grape.cacao.lifted.anchors --iter=1 -o grape.cacao.i1.blocks
+
+Time to combine ``blocks`` with this command.
+
+    $ python -m jcvi.formats.base join grape.peach.i1.blocks grape.cacao.i1.blocks --noheader | cut -f1,2,4,6 > grape.blocks
+    $ head -50 grape.blocks > blocks2
+
+Take a look at this file:
+
+    GSVIVT01012261001	.	.
+    GSVIVT01012259001	ppa005716m	.
+    GSVIVT01012258001	.	.
+    GSVIVT01012257001	ppa002846m	.
+    GSVIVT01012255001	ppa000919m	Thecc1EG011472t1
+    GSVIVT01012253001	ppa010733m	Thecc1EG011473t1
+    GSVIVT01012252001	ppa015194m	Thecc1EG011474t1
+
+This is awesome. Now we are almost ready. Our new layout file ``blocks2.layout`` says:
+
+    # x,   y, rotation,     ha,     va, color, ratio,            label
+    0.5, 0.6,        0, center,    top,      ,     1,       grape Chr1
+    0.3, 0.4,        0, center, bottom,      ,    .5, peach scaffold_1
+    0.7, 0.4,        0, center, bottom,      ,    .5, cacao scaffold_2
+    # edges
+    e, 0, 1
+    e, 0, 2
+
+Note we have changed the ``ratio`` for peach and cacao to ``.5`` to let them fit on the canvas. For publication-quality figures you'll most likely need to tweak this layout file. Like the layout file in the macro-synteny section, edges stanza say connecting grape (column 0) with peach (column 1), and grape (column 0) with cacao (column 2). Now we run:
+    
+    $ cat grape.bed peach.bed cacao.bed > grape_peach_cacao.bed
+    $ python -m jcvi.graphics.synteny blocks2 grape_peach_cacao.bed blocks2.layout
+
+![Grape-peach-cacao-blocks](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape-peach-cacao-blocks.png)
