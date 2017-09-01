@@ -37,7 +37,7 @@ For MCscan to work, we'll need sequences (``FASTA`` format) and coordinates (``B
                 Tcacao            Thalophila              Vcarteri
              Vvinifera                 Zmays         early_release
     ...
-    $ python -m jcvi.apps.fetch phytozome Vvinifera,Ppersi
+    $ python -m jcvi.apps.fetch phytozome Vvinifera,Ppersica
     ...
     $ ls
     Ppersica_139_cds.fa.gz  Ppersica_139_gene.gff3.gz  Vvinifera_145_cds.fa.gz  Vvinifera_145_gene.gff3.gz
