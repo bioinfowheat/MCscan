@@ -10,30 +10,31 @@ Phenotyping plant organs (seeds, flowers, leaves, fruits, nuts) is important in 
 Please check out [our installation guide](https://github.com/tanghaibao/jcvi/wiki/GRABSEEDS:-How-to-install).
 
 ## Single image processing
-*Please note: the following image examples can be downloaded [here](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/test-data.zip).*
+*Please note: the following image examples can be downloaded [here](https://www.dropbox.com/s/is4jrmlmmcfdpdp/test-data.zip).*
 
 To process single image, for example, ``test.JPG``, run this command:
 ```
 python -m jcvi.graphics.grabseeds seeds test.JPG
 ```
 This command generates a PDF file for debugging purposes while all the identified objects will be written to stdout. The PDF output contains object information layered onto original image. The four panels contain **Original picture**, **Edge detection**, **Object detection**, **Object list**, respectively. These panels are useful in finding the best parameter for object detection.
-![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/test.png)
+![](https://www.dropbox.com/s/lmkc9j0qj4l37pm/test.png?raw=1)
 
 ### Image cropping (``--rows``, ``--cols``)
 In the following example, the image contains a package that interfere with the seed recognition.
-![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/label0.png)
+![](https://www.dropbox.com/s/1cb3mvk8npi67ja/label0.png?raw=1)
+
 The solution is to extract certain rows (or columns) from original image, for example ``--rows=:800`` will extract the first 800 rows. Please use the coordinates on the axes of the image as a guide.
 ```
 python -m jcvi.graphics.grabseeds seeds label.JPG --rows=:800
 ```
-![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/label1.png)
+![](https://www.dropbox.com/s/xsv88ize4f0t177/label1.png?raw=1)
 
 ### Text label (``--labelrows``, ``--labelcols``)
 To fully automate phenotyping pipeline, placing a text label next to the seeds is a good idea. The packaging in the previous example contains text. Similarly to cropping the image area, ``--labelrows=1200:`` tells the program to run OCR starting on row 1200. Consequently the following command extracts the label as *2013 Sh Backcross 401O2B*.
 ```
 python -m jcvi.graphics.grabseeds seeds label.JPG --rows=:800 --labelrows=1200:
 ```
-![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/label2.png)
+![](https://www.dropbox.com/s/xuc4ter7jitj132/label2.png?raw=1)
 
 ## Improve recognition accuracy
 Please see more examples at [GRABSEEDS: How to tune accuracy](https://github.com/tanghaibao/jcvi/wiki/GRABSEEDS:-How-to-tune-accuracy).
@@ -44,13 +45,13 @@ If the photo sessions are long and separated on multiple days, it may be importa
 - Normalize the effect of lighting and correct the RGB code
 - Yield stable results when camera settings, lighting, or lens-to-table distance varies
 
-We recommend using a [ColorChecker](http://en.wikipedia.org/wiki/ColorChecker) to perform the calibration. You can make your own one by printing [this](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/colorchecker.pdf) out, and then snap a picture of it. We recommend you later rename this file ``calibrate.JPG`` and place it alongside with the images of the same batch.
+We recommend using a [ColorChecker](http://en.wikipedia.org/wiki/ColorChecker) to perform the calibration. You can make your own one by printing [this](https://www.dropbox.com/s/qthnnrq79hngf84/colorchecker.pdf) out, and then snap a picture of it. We recommend you later rename this file ``calibrate.JPG`` and place it alongside with the images of the same batch.
 
 Now measure the individual boxes on the paper and record the size in squared cm units. Let's say the size is 1cm2. Your calibration command would be:
 ```
 python -m jcvi.graphics.grabseeds calibrate batch/calibrate.JPG 1
 ```
-![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/calibrate.png)
+![](https://www.dropbox.com/s/eo5kc4unluhour0/calibrate.png?raw=1)
 
 It is important to check the PDF debugging file afterwards to make sure the calibration is done properly:
 - It must properly identifies most of the 24 boxes
@@ -61,7 +62,7 @@ The calibration generates a `calibrate.json` file, which you can then use to cor
 python -m jcvi.graphics.grabseeds seeds test.JPG --calibrate=batch/calibrate.json
 ```
 For the curious mind, `calibrate.json` includes the pixel-cm-ratio and the RGB linear transform matrix used in color correction.
-![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/formula.png)
+![](https://www.dropbox.com/s/ss8iv7xpm8zkb1l/formula.png?raw=1)
 ```
 {
     "PixelCMratio": 200.0787345021954,
@@ -99,7 +100,7 @@ python -m jcvi.graphics.grabseeds batchseeds batch --rows=:800 --labelrows=1200:
 
 The batch processing generates a combined PDF ``batch-output.pdf`` for visual debugging, and ``batch-output.tsv`` for the data in spreadsheet format.
 
-![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/screenshot.png)
+![](https://www.dropbox.com/s/ihbby3j6im93k4s/screenshot.png?raw=1)
 
 ### Best practice for batch processing
 We have a few recommendations with regards to large phenotyping experiments:
@@ -107,4 +108,4 @@ We have a few recommendations with regards to large phenotyping experiments:
 - Avoid shadow at all cost and use a background with little texture (less noise). See a poor man's setup below.
 - Store each batch of images in the same folder. Identify the calibration photo, and rename it as ``calibrate.JPG``.
 
-![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/poorman.jpg)
+![](https://www.dropbox.com/s/wcl5a3ii78ovgsz/poorman.jpg?raw=1)
