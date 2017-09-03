@@ -1,25 +1,27 @@
 Examples below show the command line usage of GRABSEEDS, in particular, how to set parameters for more accurate feature extractions.
 
-*Please note: the following image examples can be downloaded [here](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/test-data.zip).*
+*Please note: the following image examples can be downloaded [here](https://www.dropbox.com/s/is4jrmlmmcfdpdp/test-data.zip).*
 
 ### Noisy background (``--sigma``)
 In the following example, the default settings identified certain features that interfere with the real objects.
-![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/noisy0.png)
+![](https://www.dropbox.com/s/uuugd17c9rq5ypa/noisy0.png?raw=1)
+
 When the background is non-uniform and contain texture (for example, cloth), increase ``--sigma`` value. 
 ```
 python -m jcvi.graphics.grabseeds seeds noisy.JPG --sigma=2
 ```
-![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/noisy.png)
+![](https://www.dropbox.com/s/w3uny2rmde6vx1p/noisy.png?raw=1)
 
 ### Blur edges (``--kernel``)
 In the following example, the default settings correctly identified the objects but not the entire region, so the area calculation will be inaccurate. 
-![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/bluredges0.png)
+![](https://www.dropbox.com/s/fu7bv728m3gm949/bluredges0.png?raw=1)
+
 Increase ``--kernel`` value to ensure that the objects are properly filled.
-![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/bluredges.png)
+![](https://www.dropbox.com/s/yu9ehsi6sqifuaa/bluredges.png?raw=1)
 
 ### Size filtering (``--minsize``, ``--maxsize``)
 In the following example, the default settings identified a smaller object (ruler).
-![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/sizeselection0.png)
+![](https://www.dropbox.com/s/39qg8ywwc7j2eed/sizeselection0.png?raw=1)
 
 Use ``--minsize`` cutoff effectively removes the artifact, default ``--minsize=.05``, ``--maxsize=50`` which corresponds to any object with pixel counts that are between 0.05% to 50% of the entire photo. 
 
@@ -40,13 +42,14 @@ The command below changes the lower cutoff to ``1``, which is 1%, this cutoff wo
 ```
 python -m jcvi.graphics.grabseeds seeds sizeselection.JPG --minsize=1
 ```
-![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/sizeselection.png)
+![](https://www.dropbox.com/s/ba7o8azsgn3vryq/sizeselection.png?raw=1)
 
 ### Overlapping seeds (``--watershed``)
 In the following example, the shadow connect the seeds into one giant object.
-![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/touching0.png)
+![](https://www.dropbox.com/s/c8ue53xz4vfel1f/touching0.png?raw=1)
+
 Use ``--watershed`` to run the watershed algorithm to separate overlapping objects.
 ```
 python -m jcvi.graphics.grabseeds seeds touching.JPG --watershed
 ```
-![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/touching.png)
+![](https://www.dropbox.com/s/yh5tjot8syva54p/touching.png?raw=1)
