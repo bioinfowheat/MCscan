@@ -31,7 +31,7 @@ To avoid setting `PYTHONPATH` everytime, please insert the last command in your 
 ## Test
 Download the test image below (right click then download).
 
-![](https://dl.dropboxusercontent.com/u/15937715/Data/GRABSEEDS/test.JPG)
+![](https://www.dropbox.com/s/8m3jtc5yvz6rwca/test.JPG?raw=1)
 
 Run the following command:
 ```
