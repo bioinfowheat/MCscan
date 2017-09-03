@@ -37,4 +37,4 @@ Run the following command:
 ```
 python -m jcvi.graphics.grabseeds seeds test.JPG
 ```
-This command generates a PDF file for debugging purposes while all the identified objects will be written to stdout. If no error messages appear, congratulations! Now feel free to explore [GRABSEEDS](wiki/GRABSEEDS).
+This command generates a PDF file for debugging purposes while all the identified objects will be written to stdout. If no error messages appear, congratulations!
