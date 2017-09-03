@@ -3,12 +3,12 @@ The walk-through example was given in anchoring based on genetic maps. ALLMAPS h
 
 We note that a generalized form of genomic maps is constituted by markers represented as (x, y) – each marker having a coordinate on the genomic scaffolds (x) and another coordinate on the map (y), respectively. As long as the map can be convert into a list of abstract ‘markers’ carrying these two coordinates, they can be easily integrated in a unified framework.
 
-![](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/Integrated-maps.png)
+![](https://www.dropbox.com/s/mo4jec4vtmmbyyy/Integrated-maps.png?raw=1)
 
 ## Walk-through example
 Different maps have their idiosyncratic formats. For ALLMAPS to process these maps, they have to be converted to  `.bed` format. The conversion can be achieved by your own script, or using our converters. We give a few examples below, but please understand that we cannot accommodate every possible format out there.
 
-We have included using Medicago data as example, [click here to download](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/maps.zip).
+We have included using Medicago data as an example, [click here to download](https://www.dropbox.com/s/d2ln9bgi2j3zkpd/maps.zip).
 
 ### Optical map
 A popular format for optical mapping is the MapSolver XML format, which looks like (e.g. `omdata/1.xml`):
