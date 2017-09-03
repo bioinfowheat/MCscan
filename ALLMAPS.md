@@ -9,7 +9,7 @@ The ordering and orientation of genomic scaffolds to reconstruct chromosomes is 
 ### Algorithm demo
 Solving scaffold ordering and orientation (OO) in general is NP-hard. ALLMAPS converts the problem into Traveling Salesman Problem (TSP) and refines scaffold OO using Genetic Algorithm. For rough idea, a 'live' demo of the scaffold OO on yellow catfish chromosome 1 can be viewed in the animation below. 
 
-<a href="https://youtu.be/BUMMhApPCkw?vq=hd1080" target="_blank"><img src="https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/ALLMAPS.gif" alt="ALLMAPS animation" width="600" height="360" border="0" /></a>
+<a href="https://youtu.be/BUMMhApPCkw?vq=hd1080" target="_blank"><img src="https://www.dropbox.com/s/jfs8xavcxix37se/ALLMAPS.gif?raw=1" alt="ALLMAPS animation" width="600" height="360" border="0" /></a>
 
 ### Citation
 Tang H, Zhang X, Miao C, Zhang J, Ming R, Schnable J, Schnable P, Lyons E, Lu J. (2015) ALLMAPS: robust scaffold ordering based on multiple maps. [*Genome Biology*](http://genomebiology.com/2015/16/1/3) 16(1):3
@@ -42,7 +42,7 @@ If you are somehow stuck, you might need to install the libraries manually, plea
 
 Use the following script to download Linux binaries. You need to copy the binaries to a directory that's on your `PATH` (for example ~/bin).
 ```
-wget https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/ALLMAPS-install.sh
+wget --no-check-certificate https://www.dropbox.com/s/onsjieazu0uytgk/ALLMAPS-install.sh 
 sh ALLMAPS-install.sh
 cp concorde faSize liftOver ~/bin/
 ```
@@ -50,7 +50,7 @@ cp concorde faSize liftOver ~/bin/
 If you are somehow stuck, please check out [our installation guide in heavy details](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-install).
 
 ## Walk-through example
-We would like to use a small example to showcase what you can do with ALLMAPS. In this example, we have two maps, and scaffold sequences. Our goal is to use the two maps, to order and orient the genomic scaffolds into chromosomes. Download the test dataset [here](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/ALLMAPS-testdata.zip). We have the following files:
+We would like to use a small example to showcase what you can do with ALLMAPS. In this example, we have two maps, and scaffold sequences. Our goal is to use the two maps, to order and orient the genomic scaffolds into chromosomes. Download the test dataset [here](https://www.dropbox.com/s/b497bi2b594m6fp/ALLMAPS-testdata.zip). We have the following files:
 * scaffold sequences (`scaffolds.fasta`)
 * Map 1 (`JMMale.csv`)
 * Map 2 (`JMFemale.csv`)
@@ -61,10 +61,10 @@ That's it. Now let's watch how the magic unfolds.
 ```
 Scaffold ID, scaffold position, LG, genetic position
 ```
-![Genetic map format](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/Map-format.png)
+![Genetic map format](https://www.dropbox.com/s/hzsrzo7g9z3ll22/Map-format.png?raw=1)
 
 You can do this in EXCEL, but remember to save as "comma-separated format".
-![Save file in CSV](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/CSV-saving.png)
+![Save file in CSV](https://www.dropbox.com/s/bo1nam2a5fil3ss/CSV-saving.png?raw=1)
 
 For the test maps, both maps are properly formatted, so you can skip this step. Additionally, please note that ALLMAPS support a wide array of mapping evidence. For possible conversion for your own data, check out article on [How to use different types of genomic maps](https://github.com/tanghaibao/jcvi/wiki/ALLMAPS:-How-to-use-different-types-of-genomic-maps).
 
@@ -94,7 +94,7 @@ We now have a release!
 
 #### Visualize alignments
 Each generated PDF file like `chr23.pdf` corresponds to a reconstructed chromosome. The left panel contains "side-by-side" alignments between chromosomes and the linkage groups. This type of plot is helpful to reveal conflicting markers as crossing lines. The second visualization on the right is scatter plot, where the coordinates of the dots represent the physical locations and the map locations of the markers. The scatter plots are a good visualization for illustrating the monotonic trend as well as revealing breaks in colinearity.
-![chr23 alignments](https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/chr23.png)
+![chr23 alignments](https://www.dropbox.com/s/wrryfmhw8gksarh/chr23.png?raw=1)
 
 #### Summary statistics
 A summary report `JM-2.summary.txt` is provided to the user during the genome build, with important statistics such as the number of scaffolds anchored, the number of big (N50) scaffolds anchored, total number of markers included in the final assembly and total length of sequences. These statistics can be useful tools to compare the efficacy of ALLMAPS before and after anchoring.
