@@ -88,7 +88,7 @@ The best visualization to see pairwise synteny is using dotplot. This is just on
 
 We have the following dot plot in ``grape.peach.pdf``. 
 
-![Grape-peach-synteny](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape.peach.png)
+![Grape-peach-synteny](https://www.dropbox.com/s/34hqbcstpf8hy1p/grape.peach.png?raw=1)
 
 To understand what the dot plot says, look at either horizontally or vertically and count up how many blocks we generally see. Horizontally, we have for each peach region, up to 3 synteny regions in grape. Also vertically, we have for each grape region, up to 3 syntenic regions in peach. It helps to understand that grape and peach shares a genome triplication event ("gamma") event, giving rise to this 3:3 pattern. 
 
@@ -98,13 +98,13 @@ If you look closely, one of the 3 regions are often stronger, which corresponds 
     $ python -m jcvi.compara.catalog ortholog grape peach --cscore=.99
     $ python -m jcvi.graphics.dotplot grape.peach.anchors
 
-![Grape-peach-synteny-.99](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape.peach.cscore.99.png)
+![Grape-peach-synteny-.99](https://www.dropbox.com/s/32mmo0kfhtx5b8g/grape.peach.cscore.99.png?raw=1)
 
 We could also quick test if the synteny pattern is indeed **1:1**, by running:
 
     $ python -m jcvi.compara.synteny depth --histogram grape.peach.anchors
 
-![Grape-peach-depth](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape.peach.depth.png)
+![Grape-peach-depth](https://www.dropbox.com/s/hhx2dtryrum2gyo/grape.peach.depth.png?raw=1)
 
 ## Macrosynteny visualization
 Now let's move to a different kind of visualization using the same synteny output ``grape.peach.anchors``. Aside from the BED files and synteny files we already have, we need to prepare two additional files. 
@@ -132,7 +132,7 @@ With all input files ready, let's plot.
 
 This generates our karyotype figure.
 
-![Grape-peach-karyotype](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape.peach.karyotype.png)
+![Grape-peach-karyotype](https://www.dropbox.com/s/51k8jujyzage3oa/grape.peach.karyotype.png?raw=1)
 
 Further customization is possible. For example, change the order of chromosomes in ``seqids`` could lead to a visually more appealing figure. Also, play with the positions, color, labels etc in the ``layout`` file.
 
@@ -147,7 +147,7 @@ What if we want to highlight a specific block? We should go into the ``.simple``
     $ python -m jcvi.graphics.karyotype seqids layout
 
 We have then highlighted (with color 'g' green) a particular synteny block in the figure.
-![Grape-peach-karyotype-green](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape.peach.karyotype-green.png)
+![Grape-peach-karyotype-green](https://www.dropbox.com/s/so2td0eqklbklnl/grape.peach.karyotype-green.png?raw=1)
 
 ## Macrosynteny getting fancy
 We can be really creative about karyotype plots! For a start, we can add as many genomes as we want. Let's add cacao. We just need to repeat the downloading and formatting on the cacao genome (extract `cacao.cds` and `cacao.bed`).
@@ -182,7 +182,7 @@ We can also customize the rotation (in degrees), so we are no longer limited to 
     $ python -m jcvi.graphics.karyotype seqids layout
 
 We have the final product!
-![Grape-peach-cacao-fancy](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape-peach-cacao.png)
+![Grape-peach-cacao-fancy](https://www.dropbox.com/s/9vl3ys3ndvimg4c/grape-peach-cacao.png?raw=1)
 
 ## Microsynteny visualization
 What if we want to look at **local** synteny? Local synteny mostly focuses on gene-level, showing matching regions along with aligned gene models. For this, we'll need to compute the layout for the gene-level matchings:
@@ -209,7 +209,7 @@ With command below, we can generate a local synteny plot:
     $ python -m jcvi.graphics.synteny blocks grape_peach.bed blocks.layout
 
 The resulting plot looks like below.
-![Grape-peach-blocks](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape.peach.blocks.png)
+![Grape-peach-blocks](https://www.dropbox.com/s/ix2msddsndwe2ve/grape.peach.blocks.png?raw=1)
 
 ## Microsynteny getting fancy
 It is also possible to do more than two matching regions! Similar to the macro-synteny plots, first construct multi-synteny blocks using ``python -m jcvi.compara.synteny mcscan``, then modify the ``blocks.layout`` file to indicate more regions as well as edges between the regions.
@@ -249,4 +249,4 @@ Note we have changed the ``ratio`` for peach and cacao to ``.5`` to let them fit
     $ cat grape.bed peach.bed cacao.bed > grape_peach_cacao.bed
     $ python -m jcvi.graphics.synteny blocks2 grape_peach_cacao.bed blocks2.layout
 
-![Grape-peach-cacao-blocks](https://dl.dropboxusercontent.com/u/15937715/Data/github/grape-peach-cacao-blocks.png)
+![Grape-peach-cacao-blocks](https://www.dropbox.com/s/imdou9ukntt4tam/grape-peach-cacao-blocks.png?raw=1)
