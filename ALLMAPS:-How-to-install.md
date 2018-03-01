@@ -77,7 +77,7 @@ $ export PYTHONPATH=/home/username/code:$PYTHONPATH  # make sure the directory i
 
 ### 8. Test sample data
 ```
-$ wget https://dl.dropboxusercontent.com/u/15937715/Data/ALLMAPS/ALLMAPS-testdata.zip
+$ wget https://www.dropbox.com/s/b497bi2b594m6fp/ALLMAPS-testdata.zip
 $ unzip ALLMAPS-testdata.zip
 $ cd ALLMAPS-testdata
 $ sh run.sh
