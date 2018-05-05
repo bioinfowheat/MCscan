@@ -42,7 +42,7 @@ If you are somehow stuck, you might need to install the libraries manually, plea
 
 Please note that UCSC's liftOver tool is free for personal and non-profit academic research, but that commercial use requires a license fee. Commercial users can purchase a license for the liftOver tool at the [Genome Browser store](https://genome-store.ucsc.edu/).
 
-Use the following script to download Linux binaries. You need to copy the binaries to a directory that's on your `PATH` (for example ~/bin).
+Use the following script to download Linux binaries. Due to restrictions on licensing, `liftOver` download is not included in the script. You need to copy the binaries to a directory that's on your `PATH` (for example ~/bin).
 ```
 wget --no-check-certificate https://www.dropbox.com/s/onsjieazu0uytgk/ALLMAPS-install.sh 
 sh ALLMAPS-install.sh
