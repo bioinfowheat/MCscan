@@ -15,7 +15,9 @@ Two external command line tools are needed:
 * Optional [SCIP](http://scip.zib.de/). You'll need the executable ``scip`` on your ``PATH``. You can also download a copy from [here](https://github.com/tanghaibao/jcvi-bin/tree/master/bin).
 
 # Workflow
-Let's assume that you want to perform synteny comparison between ``grape`` and ``peach``.
+Let's assume that you want to perform synteny comparison between ``grape`` and ``peach``. This workflow is also available as an online Jupyter notebook (credits: Wayne Decatur [@fomightez](https://github.com/fomightez/mcscan-binder)).
+
+[![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/fomightez/mcscan-binder/master?filepath=index.ipynb)
 
 ## Download data
 For MCscan to work, we'll need sequences (``FASTA`` format) and coordinates (``BED`` format). For this example, let's get these data from [Phytozome](https://phytozome.jgi.doe.gov/pz/portal.html).
