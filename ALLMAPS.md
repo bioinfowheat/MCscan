@@ -24,9 +24,12 @@ Tang H, Zhang X, Miao C, Zhang J, Ming R, Schnable J, Schnable P, Lyons E, Lu J.
 * [jcvi](https://github.com/tanghaibao/jcvi)
 
 Most of these Python libraries can be installed using `easy_install` or `pip install`, for example:
+```console
+pip install --user biopython==1.70 numpy deap networkx matplotlib jcvi
 ```
-easy_install biopython numpy deap networkx matplotlib jcvi
-```
+
+Notice the `biopython==1.70` since the latest release (v1.72) of biopython contains a buggy function that is used by ALLMAPS, so we have to use an older version.
+
 *Optional*: If you experience problem installing the jcvi library, you can clone the [jcvi](https://github.com/tanghaibao/jcvi/) repository directly and put the directory on your `PYTHONPATH`. For example, if you want to install it to `~/code`, do the following:
 ```
 $ cd ~/code
