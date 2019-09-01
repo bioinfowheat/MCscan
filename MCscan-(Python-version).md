@@ -83,6 +83,8 @@ That's it! This calls LAST to do the comparison, filter the LAST output to remov
 
 The ``.last`` file is raw LAST output, ``.last.filtered`` is filtered LAST output, ``.anchors`` is the seed synteny blocks (high quality), ``.lifted.anchors`` recruits additional anchors to form the final synteny blocks.
 
+Some might ask, what exactly is the `.anchors` file format? [See discussion here](https://github.com/tanghaibao/jcvi/issues/141).
+
 ## Pairwise synteny visualization
 The best visualization to see pairwise synteny is using dotplot. This is just one command.
 
