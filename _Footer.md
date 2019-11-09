@@ -1,1 +1,1 @@
-_(c) Haibao Tang, 2010-2019_
+_© Haibao Tang, 2010-2019_
