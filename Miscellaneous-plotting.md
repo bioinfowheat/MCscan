@@ -1,6 +1,4 @@
-# Miscellaneous plotting
-
-We have included a number of visualization routines in the `jcvi` package.
+We have included a number of visualization routines in the `jcvi` package that might be useful to create customized plots.
 
 ## Chromosome painting
 
