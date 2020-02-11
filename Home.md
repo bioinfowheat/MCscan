@@ -10,3 +10,6 @@ GRABSEEDS facilitates computerized extraction of object features and text labels
 
 #### [MCscan (Python version)](wiki/MCscan-(Python-version))
 MCscan facilitates pairwise and multiple genome syntenic comparisons and visualizations.
+
+#### [Miscellaneus plotting](wiki/Miscellaneous-plotting)
+A number of visualization routines in the package that might be useful to create customized plots.
