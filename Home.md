@@ -13,3 +13,17 @@ MCscan facilitates pairwise and multiple genome syntenic comparisons and visuali
 
 #### [Miscellaneus plotting](wiki/Miscellaneous-plotting)
 A number of visualization routines in the package that might be useful to create customized plots.
+
+## FAQ
+<details open>
+
+<br/>
+
+<summary><b>Plotting failed with error message "No such file or directory: 'latex'"</b></summary>
+
+Please take a look at [Get LaTeX](https://www.latex-project.org/get/) for various options for each major OS. For example, on Debian-like Linux OS you can often do:
+
+```console
+sudo apt-get install -y texlive texlive-latex-extra texlive-latex-recommended
+```
+</details>
